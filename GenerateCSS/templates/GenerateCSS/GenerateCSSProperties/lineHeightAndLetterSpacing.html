@@ -1,0 +1,47 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\lineHeightAndLetterSpacing.css' %}">
+<script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\lineHeightAndLetterSpacing.js' %}"></script>
+{% endblock %}
+
+{% block title %}Line Height & Letter specing{% endblock %}
+
+{% block property_name %}
+Line Height & Letter specing
+{% endblock %}
+
+{% block property_css %}
+<div id="properies_css_container_code_box">
+    <div>
+        
+    </div>
+</div>
+{% endblock %}
+
+
+{% block property_css_playground %}
+<div id="property_css_playground">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit laboriosam nobis deleniti cum eligendi sint accusantium odio ab placeat. Illo voluptas perspiciatis perferendis eligendi amet eum expedita qui doloribus maxime ad laudantium sequi, culpa officiis! Voluptates doloremque blanditiis nobis debitis, temporibus, soluta sint dolorem reiciendis praesentium rerum, ut natus!</div>
+</div>
+{% endblock %}
+
+
+{% block property_controles %}
+
+<div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Line Height</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="0" max="60" value="20" step="0.01">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Letter Spacing</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="-10" max="20" value="0" step="0.01">
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\backdropFilter.css' %}">
+<script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\backdropFilter.js' %}"></script>
+{% endblock %}
+
+{% block title %}Backdrop Filter{% endblock %}
+
+{% block property_name %}
+Backdrop Filter
+{% endblock %}
+
+{% block property_css %}
+<div id="properies_css_container_code_box">
+    <div>
+        Container
+    </div>
+</div>
+{% endblock %}
+
+
+{% block property_css_playground %}
+<div id="property_css_playground">
+    <div>
+        <div>
+            {% comment %} <input type="color" style="float: right; height: 30px; width: 30px;"> {% endcomment %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block property_controles %}
+
+<div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Blur</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="10" value="0" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Brighness</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="400" value="100" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Contrast</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="300" value="100" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Grayscale</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="100" value="0" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Hue Rotate</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="360" value="0" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Invert</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="100" value="0" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Opacity</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="1" value="1" step="0.01">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Sepia</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="100" value="0" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Saturate</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" min="0" max="600" value="100" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Drop Shadow</div>
+            <div class="css_property_subproperty_value"></div><br>
+            <div class="css_property_subproperty_value">X</div>
+            <input type="range" class="form-range" min="0" max="20" value="5" step="0.1">
+            <div class="css_property_subproperty_value">Y</div>
+            <input type="range" class="form-range" min="0" max="20" value="5" step="0.1">
+            <div class="css_property_subproperty_value">Spread</div>
+            <input type="range" class="form-range" min="0" max="20" value="5" step="0.1">
+            <div class="css_property_subproperty_value">Color</div>
+            <input type="color" class="form-range">
+        </div>
+    </div>
+</div>
+{% endblock %}

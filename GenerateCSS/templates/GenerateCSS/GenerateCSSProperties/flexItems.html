@@ -1,0 +1,82 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+  <link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\flexItems.css' %}" />
+  <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\flexItems.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+  Flex Items
+{% endblock %}
+
+{% block property_name %}
+  Flex Items
+{% endblock %}
+
+{% block property_css %}
+  <div id="properies_css_container_code_box">
+    <div>Container</div>
+  </div>
+{% endblock %}
+
+{% block property_css_playground %}
+  <div id="property_css_playground">
+    <div>
+      <div style="height: 100px; width: 100px; font-size: large; background-color: aliceblue;">1</div>
+      <div style="height: 90px; width: 70px; font-size: x-large; background-color: rgb(254, 249, 242);">2</div>
+      <div style="height: 120px; width: 90px; font-size: small; background-color: rgb(240, 252, 241);">3</div>
+      <div style="height: 150px; width: 40px; font-size: xx-large; background-color: rgb(255, 245, 255);">4</div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block property_controles %}
+  <div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+      <div id="css_properties_container" class="css_properties_container">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
+          <label class="form-check-label" for="flexSwitchCheckDefault" style="color: red;">
+            <b>Display Flex for container</b><br>
+            <span style="font-size: x-small; text-decoration: underline;">Note : This is is property of child element i.e. 1,2,3,4 &nbsp;&nbsp; Click on box 1,2,3,4 to edit their respective css.</span>
+          </label>
+        </div>
+      </div>
+      <div id="css_properties_container" class="css_properties_container">
+        <div class="css_property_subproperty_name">Flex Grow</div>
+        <div class="css_property_subproperty_value"></div>
+        <input type="number" class="form-number" value="0" step="1" min="0">
+      </div>
+      <div id="css_properties_container" class="css_properties_container">
+        <div class="css_property_subproperty_name">Flex Shrink</div>
+        <div class="css_property_subproperty_value"></div>
+        <input type="number" class="form-number" value="1" step="1" min="0">
+      </div>
+      <div id="css_properties_container" class="css_properties_container">
+        <div class="css_property_subproperty_name">Flex Basis</div>
+        <div class="css_property_subproperty_value"></div>
+        <input type="number" class="form-number" value="1" step="1" min="0">
+      </div>
+      <div id="css_properties_container" class="css_properties_container">
+        <div class="css_property_subproperty_name">Order</div>
+        <div class="css_property_subproperty_value"></div>
+        <input type="number" class="form-number" value="1" step="1" min="1">
+      </div>
+      <div id="css_properties_container" class="css_properties_container">
+        <div class="css_property_subproperty_name">Align Self</div>
+        <div class="css_property_subproperty_value"></div><br>
+        <select>
+          <optgroup label="align-self">
+            <option value="auto" selected>auto</option>
+            <option value="stretch">stretch</option>
+            <option value="center">center</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="baseline">baseline</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+  </div>
+{% endblock %}

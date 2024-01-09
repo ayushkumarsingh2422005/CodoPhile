@@ -1,0 +1,68 @@
+.homepage_topelement{
+    width: 100%;
+    height: calc(100vh - 65px - 30px - 3px - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../Images/WebsiteBackgrounds/HomepageBgMain.png');
+    background-size: cover;
+    background-position: center;
+}
+#homepage_websitename{
+    width: 100%;
+    padding: 15px 0 10px 0;
+    color: black;
+}
+#homepage_dynamic_container{
+    width: 100%;
+    padding: 15px 0 10px 0;
+    color: red;
+    height: 50px;
+}
+#homepage_dynamic{
+    display: inline;
+}
+#homepage_dynamic_container > span{
+    animation: blink 1s infinite;
+}
+.homepage_courseelement{
+    width: 100%;
+    height: calc(100vh - 65px - 30px - 3px - 20px);
+    background-color: red;
+    display: flex;
+    color: orange;
+}
+@keyframes blink {
+    0%{
+        color: transparent;
+    }
+    50%{
+        color: red;
+    }
+    100%{
+        color: transparent;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #homepage_websitename{
+        text-align: center;
+        font-size: 30px;
+    }
+    #homepage_dynamic_container{
+        text-align: center;
+        font-size: 17px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For laptops: */
+    #homepage_websitename{
+        padding-left: 20vw;
+        font-size: 50px;
+    }
+    #homepage_dynamic_container{
+        padding: 15px 0 10px 20vw;
+        font-size: 30px;
+    }
+    
+}

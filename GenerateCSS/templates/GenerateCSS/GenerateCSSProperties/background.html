@@ -1,0 +1,52 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\background.css' %}">
+<script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\background.js' %}"></script>
+{% endblock %}
+
+{% block title %}Background{% endblock %}
+
+{% block property_name %}
+Background
+{% endblock %}
+
+{% block property_css %}
+<div id="properies_css_container_code_box">
+    <div>
+        sefhsdfhfshgsfhgh
+    </div>
+</div>
+{% endblock %}
+
+
+{% block property_css_playground %}
+hsdh
+{% endblock %}
+
+
+{% block property_controles %}
+<div id="properties_body_controles_menu">
+
+</div>
+<div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Box shadow</div>
+            <div class="css_property_subproperty_value">he</div>
+            <input type="range" class="form-range" id="customRange1" min="10" max="300" value="100">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Circle Size</div>
+            <div class="css_property_subproperty_value">he</div>
+            <input type="range" class="form-range" id="customRange1" min="10" max="300" value="100">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Circle Size</div>
+            <div class="css_property_subproperty_value">he</div>
+            <input type="range" class="form-range" id="customRange1" min="10" max="300" value="100">
+        </div>
+    </div>
+</div>
+{% endblock %}

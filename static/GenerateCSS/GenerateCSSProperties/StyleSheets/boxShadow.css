@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Oswald:wght@200&family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+#property_css_playground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    transition-duration: 0.2s;
+}
+#property_css_playground > div {
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+#properties_body_controles_menu{
+    background-color: rgba(62, 62, 62);
+    display: flex;
+    align-items: center;
+}
+#add_btn, #sub_btn{
+    background-color: rgb(9, 10, 9);
+    color: white;
+    font-weight: 800;
+    font-size: x-large;
+    border-style: none solid none none;
+    padding: 7px 14px;
+    height: 100%;
+    user-select: none;
+}
+#layer_container{
+    overflow: scroll;
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+#layer_container > div{
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 2px 15px;
+    border-radius: 4px;
+    vertical-align: top;
+    text-transform: uppercase;
+    margin-left: 10px;
+    user-select: none;
+    transition-duration: 0.4s;
+}
+#css_properties_container:last-child > input, label{
+    text-align: center;
+    user-select: none;
+    padding: 10px;
+}

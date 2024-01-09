@@ -1,0 +1,75 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\boxShadow.css' %}">
+<script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\boxShadow.js' %}"></script>
+{% endblock %}
+
+{% block title %}Box Shadow{% endblock %}
+
+{% block property_name %}
+Box Shaddow
+{% endblock %}
+
+{% block property_css %}
+<div id="properies_css_container_code_box">
+    <div>
+        Container
+    </div>
+</div>
+{% endblock %}
+
+
+{% block property_css_playground %}
+<div id="property_css_playground">
+    <div>Box Element</div>
+</div>
+{% endblock %}
+
+
+{% block property_controles %}
+<div id="properties_body_controles_menu">
+    <div id="add_btn">+</div>
+    <div id="sub_btn">-</div>
+
+    <div id="layer_container">
+        <div id="layer1" style="background-color: black; color: white;">Layer1</div>
+    </div>
+</div>
+<div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">X-Offset</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="-100" max="100" value="0">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Y-Offset</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="-100" max="100" value="0">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Blur</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="0" max="50" step="0.5" value="0">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Spread</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="-50" max="50" step="0.5" value="0">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Color</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="color" class="form-range" id="customRange1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Inset</div>
+            <div class="css_property_subproperty_value"></div>
+            <label for="inset">Inset</label>
+            <input type="checkbox" name="inset" id="inset">
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+#property_css_playground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-small;
+    transition-duration: 0.2s;
+}
+#property_css_playground > div {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+}
+select{
+    width: 100%;
+    outline: none;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #property_css_playground{
+        font-size: xx-small;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For laptops: */
+    #property_css_playground{
+        font-size: small;
+    }
+}

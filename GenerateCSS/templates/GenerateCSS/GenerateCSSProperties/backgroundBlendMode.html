@@ -1,0 +1,69 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+  <link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\backgroundBlendMode.css' %}" />
+  <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\backgroundBlendMode.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+  background-blend-mode
+{% endblock %}
+
+{% block property_name %}
+  background-blend-mode
+{% endblock %}
+
+{% block property_css %}
+  <div id="properies_css_container_code_box">
+    <div>Container</div>
+  </div>
+{% endblock %}
+
+{% block property_css_playground %}
+  <div id="property_css_playground">
+    <div style="background-image: url('..\..\static\Images\AdditionalImages\mountain.jpg');"></div>
+  </div>
+{% endblock %}
+
+{% block property_controles %}
+  <div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+      <div id="css_properties_container">
+        <div class="css_property_subproperty_name">Border Style</div><br />
+        <div class="css_property_subproperty_value"></div><br />
+        <select id="selected_unit">
+          <optgroup label="Border Style">
+            <option value="normal" selected>normal</option>
+            <option value="multiply">multiply</option>
+            <option value="screen">screen</option>
+            <option value="overlay">overlay</option>
+            <option value="darken">darken</option>
+            <option value="lighten">lighten</option>
+            <option value="color-dodge">color-dodge</option>
+            <option value="saturation">saturation</option>
+            <option value="color">color</option>
+            <option value="luminosity">luminosity</option>
+          </optgroup>
+        </select>
+        <br /><br />
+      </div>
+      <div id="css_properties_container">
+        <div class="css_property_subproperty_name">Border Style</div><br />
+        <div class="css_property_subproperty_value">nd</div><br />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="both" value="both" checked />
+          <label class="form-check-label" for="both">Both</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="gradient" value="gradient" />
+          <label class="form-check-label" for="gradient">Gradient</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="image" value="image" />
+          <label class="form-check-label" for="image">Image</label>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}Generate CSS History{% endblock %}
+
+{% block script_and_css %}
+<link rel="stylesheet" href="{% static 'GenerateCSS\StyleSheets\GenerateCSSPropertiesHistory.css' %}">
+<script src="{% static 'GenerateCSS\Scripts\GenerateCSSPropertiesHistory.js' %}"></script>
+{% endblock %}
+
+{% block page_title %}<a href="/generatecss">GenerateCSS</a>{% endblock %}
+
+{% block codophile_main_container %}
+<div id="history_data">
+    <div id="history_data_container">
+        <div>No data</div>
+        <div>
+            Nothing to show !
+        </div>
+    </div>
+</div>
+{% endblock %}

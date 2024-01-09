@@ -1,0 +1,88 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\multiColumn.css' %}">
+<script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\multiColumn.js' %}"></script>
+{% endblock %}
+
+{% block title %}Multi Column{% endblock %}
+
+{% block property_name %}
+Multi Column
+{% endblock %}
+
+{% block property_css %}
+<div id="properies_css_container_code_box">
+    <div>
+        Container
+    </div>
+</div>
+{% endblock %}
+
+
+{% block property_css_playground %}
+<div id="property_css_playground">
+    <div>
+        <h6 style="text-align: center;">&lt;h6&gt;Element with some text&lt;/h6&gt;</h6>
+        Dolore ipsum dolor cillum velit excepteur esse proident esse irure sint. Sit mollit qui esse amet quis. Tempor qui ut dolore culpa fugiat mollit labore ad ea. Minim enim duis ea mollit qui incididunt fugiat aliqua eiusmod. Culpa laboris esse laborum est aliquip non voluptate adipisicing officia. Magna et consequat Lorem consequat pariatur pariatur pariatur pariatur do qui velit anim dolore ad. Tempor cupidatat dolor occaecat nulla Lorem dolore dolor reprehenderit laborum et veniam consequat.
+
+Ea proident dolore mollit culpa aute id aliquip veniam culpa ad voluptate. Enim ipsum adipisicing eiusmod consectetur magna. Anim anim cillum cillum sunt adipisicing est pariatur consequat. Deserunt ut reprehenderit tempor aliquip veniam ut anim ipsum id commodo qui eiusmod.
+
+Quis pariatur sunt magna ad exercitation veniam do pariatur fugiat. Occaecat eu amet proident elit ipsum nostrud occaecat voluptate est enim esse officia reprehenderit ipsum. Dolore aliquip id amet consectetur labore eu anim elit pariatur. Ad enim velit minim occaecat ullamco ex Lorem aute.
+    </div>
+</div>
+{% endblock %}
+
+
+{% block property_controles %}
+
+<div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Column Count</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="number" class="form-number" value="1" step="1" min="1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Column Gap</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="0" max="100" value="0" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Rule Width</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="range" class="form-range" id="customRange1" min="0" max="20" value="5" step="0.1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Rule style</div>
+            <div class="css_property_subproperty_value"></div><br>
+            <select id="selected_unit">
+                <optgroup label="Column Rule Style">
+                  <option value="outset" selected>outset</option>
+                  <option value="inset">inset</option>
+                  <option value="ridge">ridge</option>
+                  <option value="groove">groove</option>
+                  <option value="double">double</option>
+                  <option value="solid">solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="dotted">dotted</option>
+                  <option value="hidden">hidden</option>
+                </optgroup>
+              </select>
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name"> Rule Color</div>
+            <div class="css_property_subproperty_value"></div>
+            <input type="color" class="form-range" id="customRange1">
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Column Span</div>
+            <span style="font-size: x-small; color: red;">This is property of child element not parent. Here it is &lt;h6&gt;</span><br>
+            <div class="css_property_subproperty_value"></div>
+            <label for="inset">Column Span</label>
+            <input type="checkbox" name="inset" id="inset">
+        </div>
+    </div>
+</div>
+{% endblock %}

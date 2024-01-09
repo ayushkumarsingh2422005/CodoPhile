@@ -1,0 +1,22 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}Codophile{% endblock %}
+
+{% block script_and_css %}
+<link rel="stylesheet" href="{% static 'StyleSheets/homepage.css' %}">
+<script src="{% static 'Scripts\homepage.js' %}"></script>
+{% endblock %}
+
+{% block codophile_main_container %}
+<div class="homepage_topelement">
+    <div id="homepage_websitename">Generate CSS codes <br>with Codophile</div>
+    <div id="homepage_dynamic_container">
+        <div id="homepage_dynamic"></div>
+        <span>|</span>
+    </div>
+</div>
+<div class="homepage_courseelement">
+    ayush kumar sinhgh
+</div>
+{% endblock %}

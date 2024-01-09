@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Oswald:wght@200&family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+#property_css_playground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    transition-duration: 0.2s;
+}
+#property_css_playground > div {
+    background-image: url("../../../Images/AdditionalImages/mountain.jpg") , linear-gradient(red, white) !important;
+    background-size: cover;
+    background-position: 0% 50%;
+    /* background-color: red; */
+    padding: 15px 30px;
+    border-radius: 5px;
+    width: 70%;
+    height: 60%;
+}
+select{
+    width: 100%;
+    outline: none;
+}
