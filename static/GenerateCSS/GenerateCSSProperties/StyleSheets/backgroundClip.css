@@ -1,0 +1,47 @@
+#property_css_playground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-small;
+    transition-duration: 0.2s;
+}
+#property_css_playground > div {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right,rgb(255, 176, 176), rgb(158, 255, 158));
+    margin-left: 5%;
+    border: dotted 20px black;
+    background-size: cover;
+    font-size: xx-large;
+    font-weight: bolder;
+    /* background-clip: text; */
+}
+select{
+    width: 100%;
+    outline: none;
+}
+img{
+    height: 40px;
+    width: 40px;
+}
+#css_properties_container:nth-child(2) > div:nth-child(2) > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+/* ol{
+    list-style-type: square;
+} */
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #property_css_playground{
+        font-size: xx-small;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For laptops: */
+    #property_css_playground{
+        font-size: small;
+    }
+}

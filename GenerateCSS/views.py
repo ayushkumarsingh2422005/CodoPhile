@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import GenerateCSSHomeLinks
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -15,6 +16,8 @@ def GenerateCSSHomepage(request):
 def history(request):
     return render(request, 'GenerateCSS/GenerateCSSPropertiesHistory.html')
 
+def history_get(request):
+    return JsonResponse([1,2,3,4,5,6], safe=False)
 
 def background(request):
     return render(request, 'GenerateCSS/GenerateCSSProperties/background.html')
@@ -64,3 +67,6 @@ def textDecoration(request):
 
 def lineHeightAndLetterSpacing(request):
     return render(request, 'GenerateCSS/GenerateCSSProperties/lineHeightAndLetterSpacing.html')
+
+def backgrounClip(request):
+    return render(request, 'GenerateCSS/GenerateCSSProperties/backgroundClip.html')

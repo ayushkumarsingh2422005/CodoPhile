@@ -1,0 +1,51 @@
+{% extends 'GenerateCSS\GenerateCSSProperties\basic.html' %}
+{% load static %}
+
+{% block script_and_css %}
+  <link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\backgroundClip.css' %}" />
+  <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\backgroundClip.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+Background Clip
+{% endblock %}
+
+{% block property_name %}
+Background Clip
+{% endblock %}
+
+{% block property_css %}
+  <div id="properies_css_container_code_box">
+    <div>Container</div>
+  </div>
+{% endblock %}
+
+{% block property_css_playground %}
+  <div id="property_css_playground">
+    <div>
+      CodoPhile
+    </div>
+  </div>
+{% endblock %}
+
+{% block property_controles %}
+  <img src="{% static 'Images\AdditionalImages\img.png' %}" style="display: none;"/>
+  <div id="properties_body_controles_container">
+    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+      <div id="css_properties_container">
+        <div class="css_property_subproperty_name">List Style Type</div>
+        
+        <div class="css_property_subproperty_value"></div><br />
+        <select id="selected_unit">
+          <optgroup label="list-style-type">
+            <option value="border-box" selected>border-box(default)</option>
+            <option value="padding-box">padding-box</option>
+            <option value="content-box">content-box</option>
+            <option value="text">text</option>
+          </optgroup>
+        </select>
+        <br>
+      </div>
+    </div>
+  </div>
+{% endblock %}
