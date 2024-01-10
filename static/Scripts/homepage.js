@@ -4,7 +4,8 @@ window.addEventListener('load', function(){
         'This is our website',
         'Dynamic',
         'Productive',
-        'Intelligent'
+        'Intelligent',
+        'ayush'
     ];
     var line_number = 0;
     var line_length = 0;
