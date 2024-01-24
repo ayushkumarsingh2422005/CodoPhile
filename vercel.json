@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "Codophile/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "Codophile/wsgi.py"
+      }
+    ]
+}
