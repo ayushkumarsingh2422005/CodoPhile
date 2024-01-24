@@ -2,33 +2,61 @@
 {% load static %}
 {% load custum_tags %}
 
-{% block title %}Generate CSS{% endblock %}
+{% block title %}
+  Generate CSS
+{% endblock %}
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'GenerateCSS\StyleSheets\GenerateCSSHomepage.css' %}">
-<script src="{% static 'GenerateCSS\Scripts\GenerateCSSHomepage.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'GenerateCSS\StyleSheets\GenerateCSSHomepage.css' %}" />
+  <script src="{% static 'GenerateCSS\Scripts\GenerateCSSHomepage.js' %}"></script>
 {% endblock %}
 
-{% block page_title %}<a href="/generatecss">GenerateCSS</a>{% endblock %}
+{% block page_title %}
+  <a href="/generatecss">GenerateCSS</a>
+{% endblock %}
 
 {% block codophile_main_container %}
-<div class="GenerateCSSHomepage_title">
-    <a href='/generatecss/history'>
-        <i class="fa-solid fa-clock-rotate-left fa-spin fa-spin-reverse"></i>
-    </a>
-</div>
-<div class="GenerateCSSHomepage_body">
-    {% for link in allLinks %}
-    <div style="background-color: {{link.id|modulous:10}};">
-        <a href="/generatecss{{link.link}}" target="_blank">
-            <div>
-                <img src="/media/{{link.img}}" alt="/media/{{link.img}}">
-            </div>
-            <div>
-                <h3 style="text-align: center; position: sticky; top: 0; background-color: {{link.id|modulous:10}};">{{link.title}}</h3>
-                {{link.desc|safe}}
-            </div>
-        </a>
+  {% if not user.is_authenticated %}
+    <div style="
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 10000;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: large;
+    "><a href="/login">login</a>&nbsp;to continue</div>
+  {% endif %}
+  <div class="GenerateCSSHomepage_title">
+    <a href="/generatecss/history"><i class="fa-solid fa-clock-rotate-left fa-spin fa-spin-reverse"></i></a>
+    <div>
+      <form action="/generatecss" method="get">
+        <input type="text" placeholder="search" name="search" /><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
     </div>
-    {% endfor %}
-</div>
+  </div>
+  <div class="GenerateCSSHomepage_body">
+    {% if allLinks == 'none' %}
+      <div style="height: 100% !important; height: 50vh; display: flex; align-items: center; justify-content: center;box-shadow: none; border: none;">
+        No Search result for &nbsp;<span style="font-weight: bold; color: red;">{{ search }}</span>
+      </div>
+    {% else %}
+      {% for link in allLinks %}
+        <div style="background-color: {{ link.id|modulous:10 }};">
+          <a href="/generatecss{{ link.link }}" target="_blank">
+            <div>
+              <img src="/media/{{ link.img }}" alt="/media/{{ link.img }}" />
+            </div>
+            <div>
+              <h3 style="text-align: center; position: sticky; top: 0; background-color: {{ link.id|modulous:10 }};">{{ link.title }}</h3>
+              {{ link.desc|safe }}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
 {% endblock %}

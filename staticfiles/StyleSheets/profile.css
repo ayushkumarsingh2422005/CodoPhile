@@ -1,0 +1,36 @@
+.user_not_found_page{
+    font-size: xx-large;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(235, 220, 220);
+    padding: 15px;
+}
+.user_not_found_page > div{
+    text-align: center;
+    overflow: scroll;
+}
+
+.user_found_not_logged_in{
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* media querries     */
+@media only screen and (max-width: 767.9999px) {
+    /* For mobile phones: */
+    .user_not_found_page{
+        font-size: medium;
+    }
+    
+}
+@media only screen and (min-width: 768.0001px) {
+    /* For laptops: */
+    
+}

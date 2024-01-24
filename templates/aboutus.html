@@ -1,12 +1,48 @@
 {% extends 'basic.html' %}
 {% load static %}
 
-{% block title %}Codophiel | About Us{% endblock %}
+{% block title %}
+  Codophiel | About Us
+{% endblock %}
 
-{% block script_and_css %}{% endblock %}
+{% block script_and_css %}
+  <script src="{% static 'Scripts\AdditionalScripts\framerMotion.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'StyleSheets\aboutus.css' %}" />
+{% endblock %}
 
 {% block codophile_main_container %}
-<div>
-    about us
-</div>
+  <div class="aboutus_container">
+    <div class="image">{% static '' %} jttydyk</div>
+    <div class="team_members">
+      <div>Our Team</div>
+      <div style="grid-area: main;">
+        <div id="profile_1">
+          <div></div>
+          <div>
+            Ayush_Kumar <br />
+            <span>Owner/Devloper</span>
+          </div>
+        </div>
+        <div id="profile_1">
+          <div></div>
+          <div>
+            Ayush_Kumar <br />
+            <span>Owner/Devloper</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="our_vision">
+      <div>Our Vision</div>
+      <div>
+        <b style="padding: 0; margin: 0;">Welcome to Codophile !</b> where the love for code meets the art of design! <br />
+        At Codophile, we envision a web development landscape where creativity knows no bounds and learning is a delightful journey. Our mission is to empower individuals, whether seasoned developers or coding enthusiasts, with a dynamic platform that fosters exploration and mastery of CSS properties.
+        <br><br>
+        Let's code with passion!
+      </div>
+    </div>
+  </div>
+  {% comment %} <div class="cover">
+    jbsdj
+  </div> {% endcomment %}
 {% endblock %}

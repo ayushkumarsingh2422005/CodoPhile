@@ -1,0 +1,36 @@
+
+#history_data{
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    /* background-color: green; */
+    padding: 20px;
+}
+#history_data_container{
+    width: 100%;
+    background-color: rgb(249, 245, 245);
+    overflow: hidden;
+    border-radius: 5px;
+    border: solid rgb(35, 33, 33);
+    margin-bottom: 20px;
+}
+#history_data_container > div:first-child{
+    background-color: rgb(48, 46, 46);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: larger;
+    user-select: none;
+}
+#history_data_container > div:last-child{
+    padding: 0 10px;
+}
+hr:last-child{
+    opacity: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    #history_data_container > div:last-child{
+        font-size: small;
+    }
+}

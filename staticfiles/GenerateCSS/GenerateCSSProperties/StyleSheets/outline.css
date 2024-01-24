@@ -1,0 +1,16 @@
+#property_css_playground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    transition-duration: 0.2s;
+}
+#property_css_playground > div {
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+select{
+    width: 100%;
+    outline: none;
+}

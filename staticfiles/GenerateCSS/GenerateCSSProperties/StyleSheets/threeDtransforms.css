@@ -1,0 +1,17 @@
+#property_css_playground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    transition-duration: 0.2s;
+}
+#property_css_playground > div {
+    background-color: rgb(225, 154, 154);
+    box-shadow: -1px 1px 0px 0px #000000 Inset, 1px -1px 0px 0px #000000 Inset;
+}
+#property_css_playground > div > div{
+    box-shadow: -1px 1px 0px 0px #000000 Inset, 1px -1px 0px 0px #000000 Inset;
+    padding: 15px 30px;
+    width: 100%;
+    background-color: aquamarine;
+}

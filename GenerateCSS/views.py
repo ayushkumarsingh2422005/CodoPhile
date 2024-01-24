@@ -6,9 +6,19 @@ from django.http import JsonResponse
 # Create your views here.
 
 def GenerateCSSHomepage(request):
+    # if len(request.body) > 0:
     prems = {
         'allLinks': GenerateCSSHomeLinks.objects.order_by("title").all(),
     }
+    if "search" in request.GET:
+        #print()
+        data = GenerateCSSHomeLinks.objects.filter(desc__contains=request.GET["search"]).order_by("title").all()
+        prems = {
+            'allLinks': "none" if len(data) == 0 else data,
+            'search': request.GET["search"]
+        }
+        # print(len(data))
+        return render(request, 'GenerateCSS/GenerateCSSHomepage.html', prems)
 
     return render(request, 'GenerateCSS/GenerateCSSHomepage.html', prems)
 
