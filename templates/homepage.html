@@ -1,22 +1,39 @@
 {% extends 'basic.html' %}
 {% load static %}
 
-{% block title %}Codophile{% endblock %}
+{% block title %}
+  Codophile
+{% endblock %}
 
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'StyleSheets/homepage.css' %}">
-<script src="{% static 'Scripts\homepage.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'StyleSheets/homepage.css' %}" />
+  <script src="{% static 'Scripts\homepage.js' %}"></script>
 {% endblock %}
 
 {% block codophile_main_container %}
-<div class="homepage_topelement">
-    <div id="homepage_websitename">Generate CSS codes <br>with Codophile</div>
-    <div id="homepage_dynamic_container">
-        <div id="homepage_dynamic"></div>
-        <span>|</span>
+  <div class="homepage_topelement">
+    <div id="homepage_websitename">
+      Generate CSS codes <br />with Codophile
     </div>
-</div>
-<div class="homepage_courseelement">
-    ayush kumar sinhgh
-</div>
+    <div id="homepage_dynamic_container">
+      <div id="homepage_dynamic"></div>
+      <span>_</span>
+    </div>
+  </div>
+  {% for content in contents %}
+    <div class="homepage_courseelement">
+      <div>
+        <div>
+          <div id="page_title">{{content.title}}</div>
+          <div id="page_content">{{content.desc|safe}}</div>
+          <a id="page_button" href="{{content.url}}">visit now</a>
+        </div>
+        <div>
+          <div style="background-color: red; width: 70%; padding: 15px; border-radius: 5px; background-color: black; color: antiquewhite;">
+            {{content.code|safe}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}

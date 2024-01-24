@@ -3,9 +3,12 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from MoreModels.models import UserDetail
+from MoreModels.models import HomeMainPage
 
 def codophile_homepage(request):
-    dect = {"a": 'ayush kumar singh'}
+    dect = {
+        "contents": HomeMainPage.objects.order_by("title").all()
+    }
     return render(request, 'homepage.html', dect)
 def profile(request, slug):
     if UserDetail.objects.filter(user_name=slug).exists():

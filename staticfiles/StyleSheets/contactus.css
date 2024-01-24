@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+#contactus_container{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    height: 100%;
+}
+#contactus_container > div{
+    width: 100%;
+    border-style: solid;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px;
+}
+#contactus_child_1{
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+#contactus_child_1 > div:nth-child(1){
+    padding: 0 15vw;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -1px;
+}
+#contactus_child_1 > div:nth-child(2){
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+#contactus_child_1 > div:nth-child(2) > a > img{
+    height: 25px;
+    width: 25px;
+}
+#contactus_child_2 > form > fieldset{
+    border: 1px solid #666;
+    border-radius: 8px;
+    overflow: scroll;
+    width: 100%;
+    padding: 20px 3vw 10px 3vw;
+    margin-bottom: 25px;
+    display: flex;
+    column-gap: 3vw;
+}
+#contactus_child_2 > form > fieldset > input{
+    width: 50%;
+    border-style: none none solid none;
+    outline: none;
+    padding: 5px;
+}
+#contactus_child_2 > form > fieldset > input:invalid{
+    border-color: red;
+    color: red;
+}
+#contactus_child_2 > form > fieldset > input:valid{
+    border-color: green;
+    color: green;
+}
+#contactus_child_2 > form > fieldset > textarea{
+    width: 100%;
+}
+#contactus_child_2 > form > button{
+    padding: 5px 10px;
+    border-style: solid;
+    border-radius: 5px 10px ;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+#contactus_child_2 > form > button[type="submit"]{
+    border-color: green;
+    color: green;
+}
+#contactus_child_2 > form > button[type="submit"]:hover{
+    border-color: rgb(58, 205, 65);
+    color: rgb(255, 255, 255);
+    background-color: rgb(58, 205, 65);
+}
+#contactus_child_2 > form > button[type="reset"]{
+    border-color: red;
+    color: red;
+}
+#contactus_child_2 > form > button[type="reset"]:hover{
+    border-color: red;
+    color: rgb(255, 255, 255);
+    background-color: red;
+}
+@media only screen and (max-width: 767.9999px) {
+    /* For mobile phones: */
+    #contactus_container{
+        flex-direction: column;
+        padding: 10px;
+    }
+    #contactus_child_1{
+        border-width: 1px 1px 0 1px;
+        border-radius: 5px 5px 0 0;
+    }
+    #contactus_child_2{
+        border-width: 0 1px 1px 1px;
+        border-radius: 0 0 5px 5px;
+    }
+}
+@media only screen and (min-width: 768.0001px) {
+    /* For laptops: */
+    #contactus_container{
+        flex-direction: row;
+        padding: 50px;
+    }
+    #contactus_child_1{
+        border-width: 1px 0 1px 1px;
+        border-radius: 5px 0 0 5px;
+    }
+    #contactus_child_2{
+        border-width: 1px 1px 1px 0;
+        border-radius: 0 5px 5px 0;
+    }
+    #contactus_child_1 > div:nth-child(1){
+        padding: 0 10vw;
+        font-size: 30px;
+    }
+}
