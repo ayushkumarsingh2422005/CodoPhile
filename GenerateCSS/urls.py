@@ -22,8 +22,4 @@ urlpatterns = [
     path('text-decoration/', views.textDecoration),
     path('lineheight-letterspacing/', views.lineHeightAndLetterSpacing),
     path('background-clip/', views.backgrounClip),
-<<<<<<< HEAD
 ]
-=======
-]
->>>>>>> work
