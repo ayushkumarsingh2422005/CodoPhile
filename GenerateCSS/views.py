@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import GenerateCSSHomeLinks
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 
 
 # Create your views here.
@@ -36,7 +36,7 @@ def textShadow(request):
     return render(request, 'GenerateCSS/GenerateCSSProperties/textShadow.html')
 
 def boxShadow(request):
-    return render(request, 'GenerateCSS/GenerateCSSProperties/boxShadow.html')
+    return render(request, './GenerateCSS/GenerateCSSProperties/boxShadow.html')
 
 
 def border(request):

@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from MoreModels.models import UserDetail
 from MoreModels.models import HomeMainPage
+from django.core.mail import send_mail
+from django.conf import settings
 
 def codophile_homepage(request):
     dect = {
@@ -58,6 +60,12 @@ def handle_signup(request):
         myuser.last_name = lastname
         myuser.save()
         messages.success(request, "Account created sucessfully")
+        # Sending mail to new user
+        subject = "New Account Created"
+        message = "hellow "+username+" your account has been created sucessfully"
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = [email]
+        send_mail(subject, message, from_email, recipient_list)
         # login
         user = authenticate(username=username, password=password1)
         if user is not None:
@@ -91,3 +99,13 @@ def handle_logout(request):
 # custom 404 view
 def custom_404(request, exception):
     return render(request, '404.html', status=404)
+
+
+def random_gun(request):
+    subject = "New Account Created"
+    message = "hellow " + "username" + " your account has been created sucessfully"
+    from_email = settings.EMAIL_HOST_USER
+    recipient_list = ["ayush2422005@gmail.com"]
+    send_mail(subject, message, from_email, recipient_list)
+
+    return redirect('/')
