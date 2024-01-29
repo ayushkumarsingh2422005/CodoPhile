@@ -34,4 +34,5 @@ urlpatterns = [
     path('logout/', views.handle_logout),
     path('user/<slug:slug>', views.profile),
     path('user/', views.direcrprofie),
+    path('new/', views.random_gun),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
