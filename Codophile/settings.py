@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xfjx(y%%s@hrxy@d=@buq(nvo)c-mish@g^6s7%l*dts2(ofxz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.43.149', '192.168.1.4', '192.168.0.102', '172.24.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.43.149', '192.168.0.124', 'codophile.in']
 
 # Application definition
 
@@ -134,18 +134,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'mail.codophile.in'
 EMAIL_USE_SSL = True
-# EMAIL_PORT = 465
 EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'admin@codophile.in'
-# EMAIL_HOST_PASSWORD = 'VxHeM47KieecXia'
-EMAIL_HOST_USER = 'ks4201553@gmail.com'
-EMAIL_HOST_PASSWORD = '4201553ks'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.your-email-provider.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'your-email@example.com'
-# EMAIL_HOST_PASSWORD = 'your-email-App-password'
+EMAIL_HOST_USER = 'admin@codophile.in'
+EMAIL_HOST_PASSWORD = 'VxHeM47KieecXia'

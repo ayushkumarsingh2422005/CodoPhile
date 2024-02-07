@@ -30,11 +30,8 @@
 }
 .homepage_courseelement{
     width: 100%;
-    /* height: calc(100vh - 65px - 30px - 3px - 20px); */
     height: fit-content;
-    background-color: rgb(238, 226, 226);
     display: flex;
-    color: orange;
     padding: 10px;
 }
 .homepage_courseelement>div{
@@ -46,10 +43,10 @@
     align-items: center;
     padding: 100px 10px;
 }
+
 .homepage_courseelement>div>div{
     height: 100%;
     width: 100%;
-    /* border: solid; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +54,6 @@
     color: black;
 }
 #page_title{
-    /* background-color: gray; */
     font-size: 45px;
     padding-bottom: 20px;
     font-weight: 900;
@@ -88,6 +84,34 @@
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+    .homepage_courseelement{
+        background-image: url('../Images/WebsiteBackgrounds/HomepageBgMain.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .homepage_courseelement>div{
+        padding: 10px 10px;
+    }
+    #page_title{
+        font-size: x-large;
+        padding: 0;
+        margin: 0;
+    }
+    #page_content{
+        font-size: medium;
+        /* background-color: green; */
+        padding: 0;
+        width: 90%;
+    }
+    #page_button{
+        font-size: medium;
+        padding: 5px 15px;
+        margin-bottom: 15px;
+    }
+    #homepage_courseelement_code{
+        font-size: small;
+    }
     #homepage_websitename{
         text-align: center;
         font-size: 30px;

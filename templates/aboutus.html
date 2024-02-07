@@ -6,43 +6,68 @@
 {% endblock %}
 
 {% block script_and_css %}
-  <script src="{% static 'Scripts\AdditionalScripts\framerMotion.js' %}"></script>
-  <link rel="stylesheet" href="{% static 'StyleSheets\aboutus.css' %}" />
+  {% comment %} <script src="{% static 'Scripts\AdditionalScripts\framerMotion.js' %}"></script> {% endcomment %}
+  <link rel="stylesheet" href="{% static 'StyleSheets/aboutus.css' %}" />
+  <script src="{% static 'Scripts/aboutus.js' %}"></script>
 {% endblock %}
 
 {% block codophile_main_container %}
   <div class="aboutus_container">
-    <div class="image"><a href="/new">send email</a></div>
+    <div class="image" style="background-image: url('../static/Images/Logos/Codophilelogo.png');"></div>
     <div class="team_members">
-      <div>Our Team</div>
+      <div>
+        Our Team <br />
+        <div style="height: 4px; width:10%; margin: 0 auto; background-color: rgb(255, 0, 0); border-radius: 100px; margin-top: 15px;"></div>
+      </div>
       <div style="grid-area: main;">
         <div id="profile_1">
-          <div></div>
+          <div style="background-image: url(../static/Images/TeamMemberImages/Ayush.png);"></div>
           <div>
-            Ayush_Kumar <br />
-            <span>Owner/Devloper</span>
+            Ayush <br />
+            <span>Owner</span>
           </div>
         </div>
         <div id="profile_1">
-          <div></div>
+          <div style="background-image: url();"></div>
           <div>
-            Ayush_Kumar <br />
-            <span>Owner/Devloper</span>
+            Ayush <br />
+            <span>developer</span>
           </div>
         </div>
       </div>
     </div>
     <div class="our_vision">
-      <div>Our Vision</div>
+      <div>
+        Our Vision
+        <br />
+        <div style="height: 4px; width:10%; margin: 0 auto; background-color: rgb(255, 0, 0); border-radius: 100px; margin-top: 15px;"></div>
+      </div>
       <div>
         <b style="padding: 0; margin: 0;">Welcome to Codophile !</b> where the love for code meets the art of design! <br />
         At Codophile, we envision a web development landscape where creativity knows no bounds and learning is a delightful journey. Our mission is to empower individuals, whether seasoned developers or coding enthusiasts, with a dynamic platform that fosters exploration and mastery of CSS properties.
-        <br><br>
+        <br /><br />
         Let's code with passion!
       </div>
     </div>
   </div>
-  {% comment %} <div class="cover">
-    jbsdj
-  </div> {% endcomment %}
+  <div class="cover">
+    <div class="profile_cut">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="profile_container">
+      <div class="profile_image">image soon ....</div>
+      <div class="profile_data" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="height: 2px; width: 60%; background: linear-gradient(to right, transparent, red, transparent);"></div>
+        <div style="text-align: center;font-size: x-large; padding: 10px 0 2px 0;">Ayush Kumar Singh</div>
+        <div style="text-align: center;font-size: medium;padding-bottom: 15px; color: gray;">Formar Owner/ Devloper</div>
+        <div style="text-align: center;font-size: small;padding-bottom: 15px; color: gray; width: 80%; margin: 0 auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptate dolores, sequi nemo consectetur ducimus esse saepe repellendus illum velit.</div>
+        <div class="profile_links">
+          <a href="mailto:mail.gmail.com"><img src="{% static 'Images\Icons\SocialMedia\github.png' %}" alt="facebook" /></a>
+          <a href="tel:+918299797516"><img src="{% static 'Images\Icons\SocialMedia\instagram.png' %}" alt="instagram" /></a>
+          <a href="http://"><img src="{% static 'Images\Icons\SocialMedia\linkedin.png' %}" alt="linkedin" /></a>
+        </div><br />
+        <div style="height: 2px; width: 60%; background: linear-gradient(to right, transparent, red, transparent);"></div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
