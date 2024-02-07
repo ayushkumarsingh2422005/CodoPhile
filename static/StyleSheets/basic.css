@@ -4,6 +4,7 @@
 }
 * {
     box-sizing: border-box;
+    user-select: none;
 }
 *::-webkit-scrollbar {
     display: none;
@@ -30,6 +31,7 @@ body {
     font-size: xx-large;
     color: black;
     margin-bottom: 20px;
+    z-index: 10;
 }
 #codophile_top_toolbar_1::before{
     content: " ";
@@ -116,6 +118,7 @@ body {
     text-decoration: none;
     /* font-size: large; */
     color: black;
+    background-color: white;
 }
 #codophile_top_icon_cover > div >div {
     align-items: center;
@@ -124,6 +127,7 @@ body {
     margin: 5px 10px 10px 10px;
     flex-wrap: nowrap;
     padding-top: 15px;
+    background-color: white;
 }
 #codophile_top_icon_cover > div > div > a{
     display: block;
@@ -132,10 +136,12 @@ body {
     padding: 5px 10px;
     text-decoration: none;
     font-size: small;
+    background-color: white;
     /* font-weight: 600; */
 }
 #codophile_top_icon_cover > div > div{
     width: 100%;
+    background-color: white;
 }
 #codophile_top_icon_cover > div > div > div{
     width: 100%;

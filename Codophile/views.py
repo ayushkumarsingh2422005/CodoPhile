@@ -7,11 +7,14 @@ from MoreModels.models import HomeMainPage
 from django.core.mail import send_mail
 from django.conf import settings
 
+
 def codophile_homepage(request):
     dect = {
         "contents": HomeMainPage.objects.order_by("title").all()
     }
     return render(request, 'homepage.html', dect)
+
+
 def profile(request, slug):
     if UserDetail.objects.filter(user_name=slug).exists():
         user_prof = UserDetail.objects.get(user_name=slug)
@@ -27,10 +30,15 @@ def profile(request, slug):
             "user_name": slug
         }
         return render(request, 'profile.html', prams)
+
+
 def direcrprofie(request):
     return redirect("/")
+
+
 def codophile_about(request):
     return render(request, 'aboutus.html')
+
 
 def handle_signup(request):
     if request.method == "POST":
@@ -44,16 +52,19 @@ def handle_signup(request):
             messages.warning(request, "User Name Cant be Not_Found as it is reserved")
             return redirect('/signup')
         if not username.isalnum():
-            messages.warning(request, username+" is not a valid name, Letters, digits and @/./+/-/_ only.")
+            messages.warning(request, username + " is not a valid Username should contain Letters and Numbers only.")
             return redirect('/signup')
-        if password1!=password2:
+        if password1 != password2:
             messages.warning(request, "pass in both field dont match with each other")
             return redirect('/signup')
         if len(password1) < 6:
             messages.warning(request, "password cant be smaller then 6 len")
             return redirect('/signup')
-        if User.objects.filter(username = username).exists():
-            messages.warning(request, "username allready exis")
+        if User.objects.filter(username=username).exists():
+            messages.warning(request, "username allready exist")
+            return redirect('/signup')
+        if User.objects.filter(email=email).exists():
+            messages.warning(request, "Email allready exist")
             return redirect('/signup')
         myuser = User.objects.create_user(username, email, password1)
         myuser.first_name = firstname
@@ -62,7 +73,7 @@ def handle_signup(request):
         messages.success(request, "Account created sucessfully")
         # Sending mail to new user
         subject = "New Account Created"
-        message = "hellow "+username+" your account has been created sucessfully"
+        message = "hellow " + username + " your account has been created sucessfully"
         from_email = settings.EMAIL_HOST_USER
         recipient_list = [email]
         send_mail(subject, message, from_email, recipient_list)
@@ -78,6 +89,7 @@ def handle_signup(request):
     else:
         return render(request, 'signup.html')
 
+
 def handle_signin(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -92,9 +104,11 @@ def handle_signin(request):
     else:
         return render(request, 'login.html')
 
+
 def handle_logout(request):
     logout(request)
     return redirect('/')
+
 
 # custom 404 view
 def custom_404(request, exception):

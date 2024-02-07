@@ -5,6 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Codophile is an innovative platform designed to make CSS coding a breeze for everyone. Generate CSS codes in real-time with live screen interaction, user-friendly interface, and instant feedback.">
+    <meta name="keywords" content="Codophile, CSS coding, CSS generator, web development, coding tool, interactive CSS">
+    <meta name="author" content="Your Name or Your Company Name">
+    <meta name="robots" content="index, follow"> <!-- Directs search engines to index the page and follow links -->
+    <meta name="referrer" content="no-referrer-when-downgrade"> <!-- Specifies no referrer information -->
+    <meta name="theme-color" content="#ffffff"> <!-- Defines the theme color for Chrome, Firefox OS, etc. -->
+    <link rel="canonical" href="https://codophile.in/">
     <link rel="icon" href="{% static 'Images/Logos/Codophilelogo.png' %}">
     <link rel="stylesheet" href="{% static 'StyleSheets/basic.css' %}">
     <link rel="stylesheet" href="{% static 'StyleSheets\AdditionalStyleSheets\loader.css' %}">
@@ -28,7 +35,6 @@
                 <a href="/">Home</a>
                 <a href="/about">About Us</a>
                 <a href="/contact">Contact Us</a>
-                <a href="">More</a>
                 <div>
                     {% if user.is_authenticated %}
                     <a href="/logout" id="login_button">signout</a>
@@ -49,7 +55,6 @@
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/contact">Contact Us</a>
-            <a href="">More</a>
             <div>
                 {% if user.is_authenticated %}
                 <div>
@@ -75,9 +80,7 @@
         <div id="codophile_top_toolbar_2">
             <a href="/generatecss">Generate&nbsp;CSS</a>
             <a href="/tools">Tools</a>
-            <a href="">link3</a>
-            <a href="">link5</a>
-            <a href="">link6</a>
+            <a style="opacity: 0.5; user-select: none;">Comming soon ...</a>
         </div>
         <div id="codophile_top_scrollbar">
             <div id="codophile_top_scrollbar_slider"></div>

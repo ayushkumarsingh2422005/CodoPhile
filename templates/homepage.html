@@ -1,5 +1,6 @@
 {% extends 'basic.html' %}
 {% load static %}
+{% load custum_tags %}
 
 {% block title %}
   Codophile
@@ -22,15 +23,20 @@
   </div>
   {% for content in contents %}
     <div class="homepage_courseelement">
-      <div>
+      <div style="background-color: {{ content.id|modulous:10 }}aa;">
         <div>
           <div id="page_title">{{content.title}}</div>
           <div id="page_content">{{content.desc|safe}}</div>
           <a id="page_button" href="{{content.url}}">visit now</a>
         </div>
         <div>
-          <div style="background-color: red; width: 70%; padding: 15px; border-radius: 5px; background-color: black; color: antiquewhite;">
-            {{content.code|safe}}
+          <div style="background-color: red; width: 70%; border-radius: 5px; background-color: black; color: antiquewhite; overflow: hidden;">
+            <div style="display: flex; padding: 15px; background-color: rgb(44, 44, 44); gap: 10px;">
+              <div style="height: 10px; width: 10px; background-color: red; border-radius: 50%;"></div>
+              <div style="height: 10px; width: 10px; background-color: greenyellow; border-radius: 50%;"></div>
+              <div style="height: 10px; width: 10px; background-color: blue; border-radius: 50%;"></div>
+            </div>
+            <div style="height: 40vh; overflow: scroll; padding: 15px;" id="homepage_courseelement_code">{{content.code|safe}}</div>
           </div>
         </div>
       </div>
