@@ -1,0 +1,47 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+/media/
+staticfiles/
+.env
+
+# If using Django compressor
+/compressed/
+
+# If using Celery with Django
+celerybeat-schedule
+celerybeat.pid
+
+# Ignore secret key files
+.secret_key
+
+# PyCharm project settings
+.idea/
+
+# VSCode project settings
+.vscode/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# macOS system files
+.DS_Store
+
+# Linux system files
+*.swp
+
+# Windows system files
+Thumbs.db
