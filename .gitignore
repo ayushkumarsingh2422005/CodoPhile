@@ -36,7 +36,7 @@ env/
 ENV/
 env.bak/
 venv.bak/
-
+myenv/
 # macOS system files
 .DS_Store
 
