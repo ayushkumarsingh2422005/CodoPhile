@@ -80,3 +80,4 @@ def lineHeightAndLetterSpacing(request):
 
 def backgrounClip(request):
     return render(request, 'GenerateCSS/GenerateCSSProperties/backgroundClip.html')
+
