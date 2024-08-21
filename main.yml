@@ -5,12 +5,12 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ftp.codophile.in
-        username: admin1@codophile.in
-        password: ${{ secrets.ftp_password }}
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.codophile.in
+          username: admin1@codophile.in
+          password: ${{ secrets.ftp_password }}

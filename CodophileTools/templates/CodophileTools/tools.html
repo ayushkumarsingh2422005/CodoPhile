@@ -4,7 +4,7 @@
 
 {% block title %}Generate CSS{% endblock %}
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'CodophileTools\Scripts\tools.css' %}">
+<link href="{% static 'CodophileTools\Scripts\tools.css' %}" rel="stylesheet">
 <script src="{% static 'CodophileTools\Scripts\tools.js' %}"></script>
 {% endblock %}
 
@@ -21,10 +21,11 @@
     <div style="background-color: {{link.id|modulous:10}};">
         <a href="/generatecss{{link.link}}" target="_blank">
             <div>
-                <img src="/media/{{link.img}}" alt="/media/{{link.img}}">
+                <img alt="/media/{{link.img}}" src="/media/{{link.img}}">
             </div>
             <div>
-                <h3 style="text-align: center; position: sticky; top: 0; background-color: {{link.id|modulous:10}};">{{link.title}}</h3>
+                <h3 style="text-align: center; position: sticky; top: 0; background-color: {{link.id|modulous:10}};">
+                    {{link.title}}</h3>
                 {{link.desc|safe}}
             </div>
         </a>

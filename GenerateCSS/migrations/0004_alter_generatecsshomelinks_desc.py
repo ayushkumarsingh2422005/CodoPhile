@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('GenerateCSS', '0003_remove_generatecsshomelinks_color'),
     ]

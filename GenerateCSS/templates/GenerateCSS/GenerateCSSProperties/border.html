@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\border.css' %}">
+<link href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\border.css' %}" rel="stylesheet">
 <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\border.js' %}"></script>
 {% endblock %}
 
@@ -31,33 +31,33 @@ Border
 {% block property_controles %}
 
 <div id="properties_body_controles_container">
-    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+    <div class="properties_body_controles_child" id="properties_body_controles_child1">
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Border Style</div>
             <div class="css_property_subproperty_value"></div>
             <select id="selected_unit">
                 <optgroup label="Border Style">
-                  <option value="outset" selected>outset</option>
-                  <option value="inset">inset</option>
-                  <option value="ridge">ridge</option>
-                  <option value="groove">groove</option>
-                  <option value="double">double</option>
-                  <option value="solid">solid</option>
-                  <option value="dashed">dashed</option>
-                  <option value="dotted">dotted</option>
-                  <option value="hidden">hidden</option>
+                    <option selected value="outset">outset</option>
+                    <option value="inset">inset</option>
+                    <option value="ridge">ridge</option>
+                    <option value="groove">groove</option>
+                    <option value="double">double</option>
+                    <option value="solid">solid</option>
+                    <option value="dashed">dashed</option>
+                    <option value="dotted">dotted</option>
+                    <option value="hidden">hidden</option>
                 </optgroup>
-              </select>
+            </select>
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">width</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-0" max="50" value="1" step="0.1">
+            <input class="form-range" id="customRange1" max="50" min="-0" step="0.1" type="range" value="1">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Color</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="color" class="form-range" id="customRange1">
+            <input class="form-range" id="customRange1" type="color">
         </div>
     </div>
 </div>

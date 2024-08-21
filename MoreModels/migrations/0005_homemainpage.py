@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('MoreModels', '0004_alter_userdetail_bio_alter_userdetail_github_url_and_more'),
     ]

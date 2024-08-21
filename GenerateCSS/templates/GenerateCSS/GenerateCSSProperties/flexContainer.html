@@ -2,115 +2,120 @@
 {% load static %}
 
 {% block script_and_css %}
-  <link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\flexContainer.css' %}" />
-  <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\flexContainer.js' %}"></script>
+<link href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\flexContainer.css' %}" rel="stylesheet"/>
+<script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\flexContainer.js' %}"></script>
 {% endblock %}
 
 {% block title %}
-  Flex Container
+Flex Container
 {% endblock %}
 
 {% block property_name %}
-  Flex Container
+Flex Container
 {% endblock %}
 
 {% block property_css %}
-  <div id="properies_css_container_code_box">
+<div id="properies_css_container_code_box">
     <div>Container</div>
-  </div>
+</div>
 {% endblock %}
 
 {% block property_css_playground %}
-  <div id="property_css_playground">
+<div id="property_css_playground">
     <div>
-      <div style="height: 100px; font-size: large;">1</div>
-      <div style="height: 90px; font-size: x-large;">2</div>
-      <div style="height: 120px; font-size: small;">3</div>
-      <div style="height: 150px; font-size: xx-large;">4</div>
+        <div style="height: 100px; font-size: large;">1</div>
+        <div style="height: 90px; font-size: x-large;">2</div>
+        <div style="height: 120px; font-size: small;">3</div>
+        <div style="height: 150px; font-size: xx-large;">4</div>
     </div>
-  </div>
+</div>
 {% endblock %}
 
 {% block property_controles %}
-  <div id="properties_body_controles_container">
-    <div id="properties_body_controles_child1" class="properties_body_controles_child">
-      <div id="css_properties_container">
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked />
-          <label class="form-check-label" for="flexSwitchCheckDefault" style="color: red;">
-            <b>Display Flex for container</b><br>
-            <span style="font-size: x-small; text-decoration: underline;">Note : This is is property of parent element</span>
-          </label>
+<div id="properties_body_controles_container">
+    <div class="properties_body_controles_child" id="properties_body_controles_child1">
+        <div id="css_properties_container">
+            <div class="form-check form-switch">
+                <input checked class="form-check-input" id="flexSwitchCheckDefault" role="switch" type="checkbox"/>
+                <label class="form-check-label" for="flexSwitchCheckDefault" style="color: red;">
+                    <b>Display Flex for container</b><br>
+                    <span style="font-size: x-small; text-decoration: underline;">Note : This is is property of parent element</span>
+                </label>
+            </div>
         </div>
-      </div>
-      <div id="css_properties_container">
-        <div class="css_property_subproperty_name">Flex Direction</div>
-        <div class="css_property_subproperty_value"></div><br>
-        <select>
-          <optgroup label="flex-direction">
-            <option value="row" selected>row</option>
-            <option value="row-reverse">row-reverse</option>
-            <option value="column">column</option>
-            <option value="column-reverse">column-reverse</option>
-          </optgroup>
-        </select>
-      </div>
-      <div id="css_properties_container">
-        <div class="css_property_subproperty_name">Flex Wrap</div>
-        <div class="css_property_subproperty_value"></div><br>
-        <select>
-            <optgroup label="flex-wrap">
-              <option value="wrap" selected>wrap</option>
-              <option value="nowrap">nowrap</option>
-              <option value="wrap-reverse">wrap-reverse</option>
-            </optgroup>
-          </select>
-      </div>
-      <div id="css_properties_container">
-        <div class="css_property_subproperty_name">Justify Content</div>
-        <div class="css_property_subproperty_value"></div><br>
-        <select>
-          <optgroup label="justify-content">
-            <option value="flex-start" selected>flex-start</option>
-            <option value="flex-end">flex-end</option>
-            <option value="center">center</option>
-            <option value="space-between">space-between</option>
-            <option value="space-around">space-around</option>
-            <option value="space-evenly">space-evenly</option>
-          </optgroup>
-        </select>
-      </div>
-      <div id="css_properties_container">
-        <div class="css_property_subproperty_name">Align Items</div>
-        <div class="css_property_subproperty_value"></div><br>
-        <select>
-          <optgroup label="align-items">
-            <option value="normal" selected>normal</option>
-            <option value="stretch">stretch</option>
-            <option value="center">center</option>
-            <option value="flex-start">flex-start</option>
-            <option value="flex-end">flex-end</option>
-            <option value="start">start</option>
-            <option value="end">end</option>
-            <option value="baseline">baseline</option>
-          </optgroup>
-        </select>
-      </div>
-      <div id="css_properties_container">
-        <div class="css_property_subproperty_name">Align Content</div>
-        <div class="css_property_subproperty_value"></div><br>
-        <select>
-          <optgroup label="align-content">
-            <option value="stretch">stretch</option>
-            <option value="flex-start">flex-start</option>
-            <option value="flex-end">flex-end</option>
-            <option value="center">center</option>
-            <option value="space-between">space-between</option>
-            <option value="space-around">space-around</option>
-            <option value="space-evenly">space-evenly</option>
-          </optgroup>
-        </select>
-      </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Flex Direction</div>
+            <div class="css_property_subproperty_value"></div>
+            <br>
+            <select>
+                <optgroup label="flex-direction">
+                    <option selected value="row">row</option>
+                    <option value="row-reverse">row-reverse</option>
+                    <option value="column">column</option>
+                    <option value="column-reverse">column-reverse</option>
+                </optgroup>
+            </select>
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Flex Wrap</div>
+            <div class="css_property_subproperty_value"></div>
+            <br>
+            <select>
+                <optgroup label="flex-wrap">
+                    <option selected value="wrap">wrap</option>
+                    <option value="nowrap">nowrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                </optgroup>
+            </select>
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Justify Content</div>
+            <div class="css_property_subproperty_value"></div>
+            <br>
+            <select>
+                <optgroup label="justify-content">
+                    <option selected value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </optgroup>
+            </select>
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Align Items</div>
+            <div class="css_property_subproperty_value"></div>
+            <br>
+            <select>
+                <optgroup label="align-items">
+                    <option selected value="normal">normal</option>
+                    <option value="stretch">stretch</option>
+                    <option value="center">center</option>
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="start">start</option>
+                    <option value="end">end</option>
+                    <option value="baseline">baseline</option>
+                </optgroup>
+            </select>
+        </div>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">Align Content</div>
+            <div class="css_property_subproperty_value"></div>
+            <br>
+            <select>
+                <optgroup label="align-content">
+                    <option value="stretch">stretch</option>
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </optgroup>
+            </select>
+        </div>
     </div>
-  </div>
+</div>
 {% endblock %}

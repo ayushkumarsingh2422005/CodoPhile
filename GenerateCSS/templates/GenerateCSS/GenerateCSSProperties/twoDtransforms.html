@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\twoDtransforms.css' %}">
+<link href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\twoDtransforms.css' %}" rel="stylesheet">
 <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\twoDtransforms.js' %}"></script>
 {% endblock %}
 
@@ -33,39 +33,39 @@
 {% block property_controles %}
 
 <div id="properties_body_controles_container">
-    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+    <div class="properties_body_controles_child" id="properties_body_controles_child1">
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Transform Origin</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="0" max="100" value="50" step="0.1">
+            <input class="form-range" id="customRange1" max="100" min="0" step="0.1" type="range" value="50">
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="0" max="100" value="50" step="0.1">
+            <input class="form-range" id="customRange1" max="100" min="0" step="0.1" type="range" value="50">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Rotate</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-180" max="180" value="0" step="0.1">
+            <input class="form-range" id="customRange1" max="180" min="-180" step="0.1" type="range" value="0">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Skew</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-180" max="180" value="0" step="0.1">
+            <input class="form-range" id="customRange1" max="180" min="-180" step="0.1" type="range" value="0">
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-180" max="180" value="0" step="0.1">
+            <input class="form-range" id="customRange1" max="180" min="-180" step="0.1" type="range" value="0">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Translate</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-250" max="250" value="0">
+            <input class="form-range" id="customRange1" max="250" min="-250" type="range" value="0">
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-250" max="250" value="0">
+            <input class="form-range" id="customRange1" max="250" min="-250" type="range" value="0">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Scale</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-5" max="5" value="1" step="0.01">
+            <input class="form-range" id="customRange1" max="5" min="-5" step="0.01" type="range" value="1">
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-5" max="5" value="1" step="0.01">
+            <input class="form-range" id="customRange1" max="5" min="-5" step="0.01" type="range" value="1">
         </div>
     </div>
 </div>

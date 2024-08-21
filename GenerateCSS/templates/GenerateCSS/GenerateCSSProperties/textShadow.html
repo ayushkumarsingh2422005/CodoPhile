@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\textShadow.css' %}">
+<link href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\textShadow.css' %}" rel="stylesheet">
 <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\textShadow.js' %}"></script>
 {% endblock %}
 
@@ -38,26 +38,26 @@ TextShaddow
     </div>
 </div>
 <div id="properties_body_controles_container">
-    <div id="properties_body_controles_child1" class="properties_body_controles_child">
+    <div class="properties_body_controles_child" id="properties_body_controles_child1">
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">X-Offset</div>
             <div class="css_property_subproperty_value"></div>
-            <input type="range" class="form-range" id="customRange1" min="-100" max="100" value="0">
+            <input class="form-range" id="customRange1" max="100" min="-100" type="range" value="0">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Y-Offset</div>
             <div class="css_property_subproperty_value">he</div>
-            <input type="range" class="form-range" id="customRange1" min="-100" max="100" value="0">
+            <input class="form-range" id="customRange1" max="100" min="-100" type="range" value="0">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Color</div>
             <div class="css_property_subproperty_value">he</div>
-            <input type="color" class="form-range" id="customRange1">
+            <input class="form-range" id="customRange1" type="color">
         </div>
         <div id="css_properties_container">
             <div class="css_property_subproperty_name">Blur</div>
             <div class="css_property_subproperty_value">he</div>
-            <input type="range" class="form-range" id="customRange1" min="0" max="50" step="0.5" value="0">
+            <input class="form-range" id="customRange1" max="50" min="0" step="0.5" type="range" value="0">
         </div>
     </div>
 </div>

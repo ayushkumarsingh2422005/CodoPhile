@@ -3,39 +3,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     {% block script_and_css %}{% endblock %}
     <!-- Logo Image -->
-    <link rel="icon" href="{% static 'Images/Logos/Codophilelogo.png' %}">
+    <link href="{% static 'Images/Logos/Codophilelogo.png' %}" rel="icon">
     <!-- Internal CSS files -->
-    <link rel="stylesheet" href="{% static 'CodophileTools\CodophileToolsChilds\StyleSheets\basic.css' %}">
+    <link href="{% static 'CodophileTools\CodophileToolsChilds\StyleSheets\basic.css' %}" rel="stylesheet">
     <script src="{% static 'CodophileTools\CodophileToolsChilds\Scripts\basic.js' %}"></script>
     <!-- FontAwsome CDN -->
-    <script src="https://kit.fontawesome.com/9d89bb858d.js" crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/9d89bb858d.js"></script>
     <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <title>{% block title %}Generate CSS{% endblock %}</title>
 </head>
 <body>
-    <div id="code_copied_text_temp_popup">
-        ✔ Code copied
-    </div>
-    <div id="properties_topbar">{% block property_name %}{% endblock %}</div>
-    <div id="properties_body">
-        <div id="properties_body_viewpoart">
-            <div id="properies_css_container">
-                {% block property_css %}{% endblock %}
-                <div id="properies_css_container_arrow">C<br>S<br>S<br><br>C<br>O<br>D<br>E</div>
-            </div>
-            <div id="properties_body_viewpoart_main">
-                {% block property_css_playground %}{% endblock %}
-            </div>
+<div id="code_copied_text_temp_popup">
+    ✔ Code copied
+</div>
+<div id="properties_topbar">{% block property_name %}{% endblock %}</div>
+<div id="properties_body">
+    <div id="properties_body_viewpoart">
+        <div id="properies_css_container">
+            {% block property_css %}{% endblock %}
+            <div id="properies_css_container_arrow">C<br>S<br>S<br><br>C<br>O<br>D<br>E</div>
         </div>
-        <div id="properties_body_controles">
-            {% block property_controles %}{% endblock %}
+        <div id="properties_body_viewpoart_main">
+            {% block property_css_playground %}{% endblock %}
         </div>
     </div>
+    <div id="properties_body_controles">
+        {% block property_controles %}{% endblock %}
+    </div>
+</div>
 </body>
 </html>

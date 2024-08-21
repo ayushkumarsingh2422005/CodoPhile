@@ -4,103 +4,105 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Codophile is an innovative platform designed to make CSS coding a breeze for everyone. Generate CSS codes in real-time with live screen interaction, user-friendly interface, and instant feedback.">
-    <meta name="keywords" content="Codophile, CSS coding, CSS generator, web development, coding tool, interactive CSS">
-    <meta name="author" content="Your Name or Your Company Name">
-    <meta name="robots" content="index, follow"> <!-- Directs search engines to index the page and follow links -->
-    <meta name="referrer" content="no-referrer-when-downgrade"> <!-- Specifies no referrer information -->
-    <meta name="theme-color" content="#ffffff"> <!-- Defines the theme color for Chrome, Firefox OS, etc. -->
-    <link rel="canonical" href="https://codophile.in/">
-    <link rel="icon" href="{% static 'Images/Logos/Codophilelogo.png' %}">
-    <link rel="stylesheet" href="{% static 'StyleSheets/basic.css' %}">
-    <link rel="stylesheet" href="{% static 'StyleSheets\AdditionalStyleSheets\loader.css' %}">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Codophile is an innovative platform designed to make CSS coding a breeze for everyone. Generate CSS codes in real-time with live screen interaction, user-friendly interface, and instant feedback."
+          name="description">
+    <meta content="Codophile, CSS coding, CSS generator, web development, coding tool, interactive CSS" name="keywords">
+    <meta content="Your Name or Your Company Name" name="author">
+    <meta content="index, follow" name="robots"> <!-- Directs search engines to index the page and follow links -->
+    <meta content="no-referrer-when-downgrade" name="referrer"> <!-- Specifies no referrer information -->
+    <meta content="#ffffff" name="theme-color"> <!-- Defines the theme color for Chrome, Firefox OS, etc. -->
+    <link href="https://codophile.in/" rel="canonical">
+    <link href="{% static 'Images/Logos/Codophilelogo.png' %}" rel="icon">
+    <link href="{% static 'StyleSheets/basic.css' %}" rel="stylesheet">
+    <link href="{% static 'StyleSheets\AdditionalStyleSheets\loader.css' %}" rel="stylesheet">
     <script src="{% static 'Scripts\basic.js' %}"></script>
-    <script src="https://kit.fontawesome.com/9d89bb858d.js" crossorigin="anonymous"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3817537399073336"
-     crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/9d89bb858d.js"></script>
+    <script async crossorigin="anonymous"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3817537399073336"></script>
     {% block script_and_css %}{% endblock %}
-    
+
 
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
-    
-    <!-- Taskbaar and tool bar code goes here -->
-    <div id="codophile_main_top">
-        <div id="codophile_top_toolbar_1">
-            <div id="codophile_main_logo">
-                {% block page_title %}<a href="/">Codophile</a>{% endblock %}
-            </div>
-            <div id="codophile_top_links">
-                <a href="/">Home</a>
-                <a href="/about">About Us</a>
-                <a href="/contact">Contact Us</a>
-                <div>
-                    {% if user.is_authenticated %}
-                    <a href="/logout" id="login_button">signout</a>
-                    <a href="/user/{{user.username}}" id="signup_button">{{user.username}}</a>
-                    {% else %}
-                    <a href="/login" id="login_button" target="_blank">Log in</a>
-                    <a href="/signup" id="signup_button" target="_blank">Register</a>
-                    {% endif %}
-                </div>
-            </div>
-            <div id="codophile_top_icon">
-                <i class="fa-solid fa-bars" id="codophile_top_icon_bar"></i>
-            </div>
-        </div>
 
-        <!-- Covers code goes here -->
-        <div id="codophile_top_icon_cover">
+<!-- Taskbaar and tool bar code goes here -->
+<div id="codophile_main_top">
+    <div id="codophile_top_toolbar_1">
+        <div id="codophile_main_logo">
+            {% block page_title %}<a href="/">Codophile</a>{% endblock %}
+        </div>
+        <div id="codophile_top_links">
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/contact">Contact Us</a>
             <div>
                 {% if user.is_authenticated %}
-                <div>
-                    <div>
-                        <a href="/user/{{user.username}}" id="signup_button">{{user.username}} &nbsp;&nbsp;<i class="fa-solid fa-greater-than"></i></a>
-                    </div>
-                    <div>
-                        <a href="/logout" id="login_button">signout &nbsp;&nbsp;
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                        </a>
-                    </div>
-                </div>
+                <a href="/logout" id="login_button">signout</a>
+                <a href="/user/{{user.username}}" id="signup_button">{{user.username}}</a>
                 {% else %}
-                <div style="border-top: solid rgb(209, 209, 209);display: flex;">
-                    <a href="/login" id="login_button">Log in</a>
-                    <a href="/signup" id="signup_button">Register</a>
-                </div>
+                <a href="/login" id="login_button" target="_blank">Log in</a>
+                <a href="/signup" id="signup_button" target="_blank">Register</a>
                 {% endif %}
             </div>
         </div>
-        <!-- Covers code ends here -->
-
-        <div id="codophile_top_toolbar_2">
-            <a href="/generatecss">Generate&nbsp;CSS</a>
-            <a href="/tools">Tools</a>
-            <a style="opacity: 0.5; user-select: none;">Comming soon ...</a>
-        </div>
-        <div id="codophile_top_scrollbar">
-            <div id="codophile_top_scrollbar_slider"></div>
+        <div id="codophile_top_icon">
+            <i class="fa-solid fa-bars" id="codophile_top_icon_bar"></i>
         </div>
     </div>
 
-    <!-- Main Content goes here code goes here -->
-    <div id="codophile_main_container">
-        {% block codophile_main_container %}{% endblock %}
+    <!-- Covers code goes here -->
+    <div id="codophile_top_icon_cover">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
+        <div>
+            {% if user.is_authenticated %}
+            <div>
+                <div>
+                    <a href="/user/{{user.username}}" id="signup_button">{{user.username}} &nbsp;&nbsp;<i
+                            class="fa-solid fa-greater-than"></i></a>
+                </div>
+                <div>
+                    <a href="/logout" id="login_button">signout &nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <div style="border-top: solid rgb(209, 209, 209);display: flex;">
+                <a href="/login" id="login_button">Log in</a>
+                <a href="/signup" id="signup_button">Register</a>
+            </div>
+            {% endif %}
+        </div>
     </div>
-    <!-- Loader Code -->
-    <div id="loader_container">
-        <div id="loader_container_c"></div>
-        <div id="loader_container_o_1"></div>
-        <div id="loader_container_d"></div>
-        <div id="loader_container_o_2"></div>
-        <div id="loader_container_text"></div>
+    <!-- Covers code ends here -->
+
+    <div id="codophile_top_toolbar_2">
+        <a href="/generatecss">Generate&nbsp;CSS</a>
+        <a href="/tools">Tools</a>
+        <a style="opacity: 0.5; user-select: none;">Comming soon ...</a>
     </div>
+    <div id="codophile_top_scrollbar">
+        <div id="codophile_top_scrollbar_slider"></div>
+    </div>
+</div>
+
+<!-- Main Content goes here code goes here -->
+<div id="codophile_main_container">
+    {% block codophile_main_container %}{% endblock %}
+</div>
+<!-- Loader Code -->
+<div id="loader_container">
+    <div id="loader_container_c"></div>
+    <div id="loader_container_o_1"></div>
+    <div id="loader_container_d"></div>
+    <div id="loader_container_o_2"></div>
+    <div id="loader_container_text"></div>
+</div>
 </body>
 
 </html>

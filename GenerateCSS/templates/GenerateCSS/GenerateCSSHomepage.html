@@ -3,20 +3,20 @@
 {% load custum_tags %}
 
 {% block title %}
-  Generate CSS
+Generate CSS
 {% endblock %}
 {% block script_and_css %}
-  <link rel="stylesheet" href="{% static 'GenerateCSS\StyleSheets\GenerateCSSHomepage.css' %}" />
-  <script src="{% static 'GenerateCSS\Scripts\GenerateCSSHomepage.js' %}"></script>
+<link href="{% static 'GenerateCSS\StyleSheets\GenerateCSSHomepage.css' %}" rel="stylesheet"/>
+<script src="{% static 'GenerateCSS\Scripts\GenerateCSSHomepage.js' %}"></script>
 {% endblock %}
 
 {% block page_title %}
-  <a href="/generatecss">GenerateCSS</a>
+<a href="/generatecss">GenerateCSS</a>
 {% endblock %}
 
 {% block codophile_main_container %}
-  {% if not user.is_authenticated %}
-    <div style="
+{% if not user.is_authenticated %}
+<div style="
       position: absolute;
       width: 100%;
       height: 100%;
@@ -29,48 +29,51 @@
       justify-content: center;
       font-size: large;
     ">
-      <a href="/login">login</a>&nbsp;to continue
-    </div>
-  {% else %}
-    <div class="GenerateCSSHomepage_title">
-      <a href="/generatecss/history"><i class="fa-solid fa-clock-rotate-left fa-spin fa-spin-reverse"></i></a>
-      <div>
+    <a href="/login">login</a>&nbsp;to continue
+</div>
+{% else %}
+<div class="GenerateCSSHomepage_title">
+    <a href="/generatecss/history"><i class="fa-solid fa-clock-rotate-left fa-spin fa-spin-reverse"></i></a>
+    <div>
         <form action="/generatecss" method="get">
-          <input type="text" placeholder="search" name="search" /><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input name="search" placeholder="search" type="text"/>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-      </div>
     </div>
-    <div class="GenerateCSSHomepage_body">
-      {% if allLinks == 'none' %}
-        <div style="height: 100% !important; height: 50vh; display: flex; align-items: center; justify-content: center;box-shadow: none; border: none;">
-          No Search result for &nbsp;<span style="font-weight: bold; color: red;">{{ search }}</span>
-        </div>
-      {% else %}
-        {% for link in allLinks %}
-          <div style="background-color: {{ link.id|modulous:10 }};">
-            <a href="/generatecss{{ link.link }}" target="_blank">
-              <div>
-                <img src="/media/{{ link.img }}" alt="/media/{{ link.img }}" />
-              </div>
-              <div>
+</div>
+<div class="GenerateCSSHomepage_body">
+    {% if allLinks == 'none' %}
+    <div style="height: 100% !important; height: 50vh; display: flex; align-items: center; justify-content: center;box-shadow: none; border: none;">
+        No Search result for &nbsp;<span style="font-weight: bold; color: red;">{{ search }}</span>
+    </div>
+    {% else %}
+    {% for link in allLinks %}
+    <div style="background-color: {{ link.id|modulous:10 }};">
+        <a href="/generatecss{{ link.link }}" target="_blank">
+            <div>
+                <img alt="/media/{{ link.img }}" src="/media/{{ link.img }}"/>
+            </div>
+            <div>
                 <h3 style="text-align: center; background-color: {{ link.id|modulous:10 }};">{{ link.title }}</h3>
                 {{ link.desc|safe }}
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-        <div style="background-color: gainsboro;">
-          <a>
-            <div>
-              <img />
             </div>
-            <div>
-              <h3 style="text-align: center; background-color: gainsboro;">....</h3>
-              <div style="display: flex; justify-content: center; align-items: center; height: 50%; opacity: 0.5;">More properties will be updated soon</div>
-            </div>
-          </a>
-        </div>
-      {% endif %}
+        </a>
     </div>
-  {% endif %}
+    {% endfor %}
+    <div style="background-color: gainsboro;">
+        <a>
+            <div>
+                <img/>
+            </div>
+            <div>
+                <h3 style="text-align: center; background-color: gainsboro;">....</h3>
+                <div style="display: flex; justify-content: center; align-items: center; height: 50%; opacity: 0.5;">
+                    More properties will be updated soon
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
 {% endblock %}

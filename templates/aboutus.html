@@ -2,72 +2,89 @@
 {% load static %}
 
 {% block title %}
-  Codophiel | About Us
+Codophiel | About Us
 {% endblock %}
 
 {% block script_and_css %}
-  {% comment %} <script src="{% static 'Scripts\AdditionalScripts\framerMotion.js' %}"></script> {% endcomment %}
-  <link rel="stylesheet" href="{% static 'StyleSheets/aboutus.css' %}" />
-  <script src="{% static 'Scripts/aboutus.js' %}"></script>
+{% comment %}
+<script src="{% static 'Scripts\AdditionalScripts\framerMotion.js' %}"></script> {% endcomment %}
+<link href="{% static 'StyleSheets/aboutus.css' %}" rel="stylesheet"/>
+<script src="{% static 'Scripts/aboutus.js' %}"></script>
 {% endblock %}
 
 {% block codophile_main_container %}
-  <div class="aboutus_container">
+<div class="aboutus_container">
     <div class="image" style="background-image: url('../static/Images/Logos/Codophilelogo.png');"></div>
     <div class="team_members">
-      <div>
-        Our Team <br />
-        <div style="height: 4px; width:10%; margin: 0 auto; background-color: rgb(255, 0, 0); border-radius: 100px; margin-top: 15px;"></div>
-      </div>
-      <div style="grid-area: main;">
-        <div id="profile_1">
-          <div style="background-image: url('../static/Images/TeamMemberImages/AyushFull.png');"></div>
-          <div>
-            Ayush <br />
-            <span>Owner</span>
-          </div>
+        <div>
+            Our Team <br/>
+            <div style="height: 4px; width:10%; margin: 0 auto; background-color: rgb(255, 0, 0); border-radius: 100px; margin-top: 15px;"></div>
         </div>
-        <div id="profile_1">
-          <div style="background-image: url('../static/Images/TeamMemberImages/AyushFull.png');"></div>
-          <div>
-            Ayush <br />
-            <span>developer</span>
-          </div>
+        <div style="grid-area: main;">
+            <div id="profile_1">
+                <div style="background-image: url('../static/Images/TeamMemberImages/AyushFull.png');"></div>
+                <div>
+                    Ayush <br/>
+                    <span>Owner</span>
+                </div>
+            </div>
+            <div id="profile_1">
+                <div style="background-image: url('../static/Images/TeamMemberImages/AyushFull.png');"></div>
+                <div>
+                    Ayush <br/>
+                    <span>developer</span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <div class="our_vision">
-      <div>
-        Our Vision
-        <br />
-        <div style="height: 4px; width:10%; margin: 0 auto; background-color: rgb(255, 0, 0); border-radius: 100px; margin-top: 15px;"></div>
-      </div>
-      <div>
-        <b style="padding: 0; margin: 0;">Welcome to Codophile !</b> where the love for code meets the art of design! <br />
-        At Codophile, we envision a web development landscape where creativity knows no bounds and learning is a delightful journey. Our mission is to empower individuals, whether seasoned developers or coding enthusiasts, with a dynamic platform that fosters exploration and mastery of CSS properties.
-        <br /><br />
-        Let's code with passion!
-      </div>
+        <div>
+            Our Vision
+            <br/>
+            <div style="height: 4px; width:10%; margin: 0 auto; background-color: rgb(255, 0, 0); border-radius: 100px; margin-top: 15px;"></div>
+        </div>
+        <div>
+            <b style="padding: 0; margin: 0;">Welcome to Codophile !</b> where the love for code meets the art of
+            design! <br/>
+            At Codophile, we envision a web development landscape where creativity knows no bounds and learning is a
+            delightful journey. Our mission is to empower individuals, whether seasoned developers or coding
+            enthusiasts, with a dynamic platform that fosters exploration and mastery of CSS properties.
+            <br/><br/>
+            Let's code with passion!
+        </div>
     </div>
-  </div>
-  <div class="cover">
+</div>
+<div class="cover">
     <div class="profile_cut">
-      <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark"></i>
     </div>
     <div class="profile_container">
-      <div class="profile_image" style="background-image: url('../static/Images/TeamMemberImages/AyushFull.png');"></div>
-      <div class="profile_data" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <div style="height: 2px; width: 60%; background: linear-gradient(to right, transparent, red, transparent);"></div>
-        <div style="text-align: center;font-size: x-large; padding: 10px 0 2px 0;">Ayush Kumar Singh</div>
-        <div style="text-align: center;font-size: medium;padding-bottom: 15px; color: gray;">Formar Owner/ Devloper</div>
-        <div style="text-align: center;font-size: small;padding-bottom: 15px; color: gray; width: 80%; margin: 0 auto;">Hey there! I'm <b style="color: black;">Ayush</b>, the brain behind <i><b style="color: black;">Codophile</b></i>. With a passion for web development and a vision to simplify CSS coding, I founded Codophile. Our platform is designed to make CSS coding a breeze for everyone, from beginners to seasoned developers. Join us on this journey of innovation and creativity as we revolutionize the way we code!</div>
-        <div class="profile_links">
-          <a href="https://github.com/ayushkumarsingh2422005" target="_blank"><img src="{% static 'Images\Icons\SocialMedia\github.png' %}" alt="facebook" /></a>
-          <a href="https://www.instagram.com/ayush_maurya_2005/" target="_blank"><img src="{% static 'Images\Icons\SocialMedia\instagram.png' %}" alt="instagram" /></a>
-          <a href="https://www.linkedin.com/in/its-ayushkrsingh/" target="_blank"><img src="{% static 'Images\Icons\SocialMedia\linkedin.png' %}" alt="linkedin" /></a>
-        </div><br />
-        <div style="height: 2px; width: 60%; background: linear-gradient(to right, transparent, red, transparent);"></div>
-      </div>
+        <div class="profile_image"
+             style="background-image: url('../static/Images/TeamMemberImages/AyushFull.png');"></div>
+        <div class="profile_data"
+             style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="height: 2px; width: 60%; background: linear-gradient(to right, transparent, red, transparent);"></div>
+            <div style="text-align: center;font-size: x-large; padding: 10px 0 2px 0;">Ayush Kumar Singh</div>
+            <div style="text-align: center;font-size: medium;padding-bottom: 15px; color: gray;">Formar Owner/
+                Devloper
+            </div>
+            <div style="text-align: center;font-size: small;padding-bottom: 15px; color: gray; width: 80%; margin: 0 auto;">
+                Hey there! I'm <b style="color: black;">Ayush</b>, the brain behind <i><b style="color: black;">Codophile</b></i>.
+                With a passion for web development and a vision to simplify CSS coding, I founded Codophile. Our
+                platform is designed to make CSS coding a breeze for everyone, from beginners to seasoned developers.
+                Join us on this journey of innovation and creativity as we revolutionize the way we code!
+            </div>
+            <div class="profile_links">
+                <a href="https://github.com/ayushkumarsingh2422005" target="_blank"><img
+                        alt="facebook" src="{% static 'Images\Icons\SocialMedia\github.png' %}"/></a>
+                <a href="https://www.instagram.com/ayush_maurya_2005/" target="_blank"><img
+                        alt="instagram" src="{% static 'Images\Icons\SocialMedia\instagram.png' %}"/></a>
+                <a href="https://www.linkedin.com/in/its-ayushkrsingh/" target="_blank"><img
+                        alt="linkedin" src="{% static 'Images\Icons\SocialMedia\linkedin.png' %}"/></a>
+            </div>
+            <br/>
+            <div style="height: 2px; width: 60%; background: linear-gradient(to right, transparent, red, transparent);"></div>
+        </div>
     </div>
-  </div>
+</div>
 {% endblock %}

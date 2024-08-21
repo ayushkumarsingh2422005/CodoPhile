@@ -1,11 +1,12 @@
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login, logout
-from MoreModels.models import UserDetail
-from MoreModels.models import HomeMainPage
-from django.core.mail import send_mail
 from django.conf import settings
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+
+from MoreModels.models import HomeMainPage
+from MoreModels.models import UserDetail
 
 
 def codophile_homepage(request):

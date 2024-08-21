@@ -2,37 +2,37 @@
 {% load static %}
 
 {% block title %}
-  {% if user_prof == 'Not_Found' %}
-    user not found
-  {% else %}
-    {{ user_prof.user_name }}
-  {% endif %}
+{% if user_prof == 'Not_Found' %}
+user not found
+{% else %}
+{{ user_prof.user_name }}
+{% endif %}
 {% endblock %}
 
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'StyleSheets/profile.css' %}">
+<link href="{% static 'StyleSheets/profile.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block codophile_main_container %}
-  {% if user_prof == 'Not_Found' %}
-  <style>
+{% if user_prof == 'Not_Found' %}
+<style>
     #codophile_top_toolbar_1{
         background-color: rgb(235, 220, 220) !important;
     }
     #codophile_top_toolbar_1::before{
         background-color: rgb(235, 220, 220) !important;
     }
-  </style>
-  <div class="user_not_found_page">
+</style>
+<div class="user_not_found_page">
     <div>username &nbsp; <span style="color: red;">{{user_name}}</span> &nbsp; is not found</div>
-  </div>
-  {% else %}
-    {% if user_prof.user_name == user.username %}
-      {{ user_prof.user_name }} Loged in as {{ user.username }}
-    {% else %}
-      <div class="user_found_not_logged_in">
-        
-      </div>
-    {% endif %}
-  {% endif %}
+</div>
+{% else %}
+{% if user_prof.user_name == user.username %}
+{{ user_prof.user_name }} Loged in as {{ user.username }}
+{% else %}
+<div class="user_found_not_logged_in">
+
+</div>
+{% endif %}
+{% endif %}
 {% endblock %}

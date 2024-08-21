@@ -3,9 +3,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="{% static 'Images/Logos/Codophilelogo.png' %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <link href="{% static 'Images/Logos/Codophilelogo.png' %}" rel="icon">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Rgister</title>
     <style>
         * {
@@ -169,57 +169,57 @@
 </head>
 
 <body
-    style="display: flex; align-items: center; justify-content: center; height: 100vh; padding: 10px; background-color: #495057;">
-    <div id="alert_box">
-        {% for message in messages %}
-        <div class="alert_box_elements {{message.tags}}">{{ message }}</div>
-        {% endfor %}
+        style="display: flex; align-items: center; justify-content: center; height: 100vh; padding: 10px; background-color: #495057;">
+<div id="alert_box">
+    {% for message in messages %}
+    <div class="alert_box_elements {{message.tags}}">{{ message }}</div>
+    {% endfor %}
+</div>
+<div>
+    <div id="top">Sign Up</div>
+    <div class="container">
+        <form action="/signup/" class="row g-3 dar" method="post">{% csrf_token %}
+            <div class="cont">
+                <label class="form-label" for="username">User Name</label>
+                <input class="form-control" id="username" name="username" placeholder="no special character allowed"
+                       type="text"/>
+            </div>
+            <div class="cont">
+                <label class="form-label" for="firstname">Name</label>
+                <div>
+                    <input aria-label="First name" class="form-control" id="firstname" name="firstname"
+                           placeholder="First name" type="text"/>
+                    <input aria-label="Last name" class="form-control" id="lastname" name="lastname"
+                           placeholder="Last name" type="text"/>
+                </div>
+
+            </div>
+
+            <div class="cont">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" id="email" name="email" placeholder="example@gmail.com" type="email"/>
+            </div>
+            <div class="cont">
+                <label class="form-label" for="inputPassword4">Password</label>
+                <div>
+                    <input class="form-control" id="inputPassword4" name="password1" placeholder="new pass"
+                           type="password"/>
+                    <input class="form-control" id="inputPassword4" name="password2" placeholder="repeat pass"
+                           type="password"/>
+                </div>
+            </div>
+            <div class="cont">
+                <button class="btn btn-primary" id="submit" type="submit">Sign up</button>
+            </div>
+        </form>
     </div>
-    <div>
-        <div id="top">Sign Up</div>
-        <div class="container">
-            <form class="row g-3 dar" action="/signup/" method="post">{% csrf_token %}
-                <div class="cont">
-                    <label for="username" class="form-label">User Name</label>
-                    <input type="text" class="form-control" id="username" placeholder="no special character allowed"
-                        name="username" />
-                </div>
-                <div class="cont">
-                    <label for="firstname" class="form-label">Name</label>
-                    <div>
-                        <input type="text" class="form-control" id="firstname" placeholder="First name"
-                            aria-label="First name" name="firstname" />
-                        <input type="text" class="form-control" id="lastname" placeholder="Last name"
-                            aria-label="Last name" name="lastname" />
-                    </div>
+    <div style="padding: 30px 0; font-size: medium; color: aliceblue; width: 100%;">already have an account <br><a
+            href="/login" rel="noopener noreferrer" style="color: #92befe; font-size: larger;">Sign in</a></div>
+</div>
+<script>
+    let btn = document.querySelector("#submit");
 
-                </div>
-
-                <div class="cont">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com" name="email" />
-                </div>
-                <div class="cont">
-                    <label for="inputPassword4" class="form-label">Password</label>
-                    <div>
-                        <input type="password" class="form-control" id="inputPassword4" name="password1"
-                            placeholder="new pass" />
-                        <input type="password" class="form-control" id="inputPassword4" name="password2"
-                            placeholder="repeat pass" />
-                    </div>
-                </div>
-                <div class="cont">
-                    <button type="submit" class="btn btn-primary" id="submit">Sign up</button>
-                </div>
-            </form>
-        </div>
-        <div style="padding: 30px 0; font-size: medium; color: aliceblue; width: 100%;">already have an account <br><a
-                href="/login" rel="noopener noreferrer" style="color: #92befe; font-size: larger;">Sign in</a></div>
-    </div>
-    <script>
-        let btn = document.querySelector("#submit");
-
-    </script>
+</script>
 </body>
 
 </html>

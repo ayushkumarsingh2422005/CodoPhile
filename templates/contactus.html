@@ -4,7 +4,7 @@
 {% block title %}Codophiel | Contact us{% endblock %}
 
 {% block script_and_css %}
-<link rel="stylesheet" href="{% static 'StyleSheets/contactus.css' %}">
+<link href="{% static 'StyleSheets/contactus.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block codophile_main_container %}
@@ -12,26 +12,28 @@
     <div id="contactus_child_1">
         <div>feel free to ask for help we are ready to help you. Contact us via form attached of on social media</div>
         <div>
-            <a href="mailto:mail.gmail.com"><img src="{% static 'Images\Icons\SocialMedia\facebook.png' %}" alt="facebook"></a>
-            <a href="tel:+918299797516"><img src="{% static 'Images\Icons\SocialMedia\instagram.png' %}" alt="instagram"></a>
-            <a href="http://"><img src="{% static 'Images\Icons\SocialMedia\linkedin.png' %}" alt="linkedin"></a>
+            <a href="mailto:mail.gmail.com"><img alt="facebook"
+                                                 src="{% static 'Images\Icons\SocialMedia\facebook.png' %}"></a>
+            <a href="tel:+918299797516"><img alt="instagram"
+                                             src="{% static 'Images\Icons\SocialMedia\instagram.png' %}"></a>
+            <a href="http://"><img alt="linkedin" src="{% static 'Images\Icons\SocialMedia\linkedin.png' %}"></a>
         </div>
     </div>
     <div id="contactus_child_2">
         <form action="/contact/" method="post">{% csrf_token %}
-            <fieldset >
+            <fieldset>
                 <legend><i class="fa-solid fa-user"></i> Name</legend>
-                <input type="text" name="first_name" maxlength="20" placeholder="first name" required>
-                <input type="text" name="last_name" maxlength="20" placeholder="last name">
+                <input maxlength="20" name="first_name" placeholder="first name" required type="text">
+                <input maxlength="20" name="last_name" placeholder="last name" type="text">
             </fieldset>
-            <fieldset >
+            <fieldset>
                 <legend><i class="fa-solid fa-phone"></i> / <i class="fa-solid fa-envelope"></i></legend>
-                <input type="tel" name="phone_number" maxlength="10" placeholder="XXXXXXXXXX" required>
-                <input type="email" name="email" maxlength="40" placeholder="example@gmail.com">
+                <input maxlength="10" name="phone_number" placeholder="XXXXXXXXXX" required type="tel">
+                <input maxlength="40" name="email" placeholder="example@gmail.com" type="email">
             </fieldset>
-            <fieldset >
+            <fieldset>
                 <legend><i class="fa-solid fa-phone"></i> Desc</legend>
-                <textarea name="desc" cols="30" rows="10"></textarea>
+                <textarea cols="30" name="desc" rows="10"></textarea>
             </fieldset>
             <button type="submit">Submit</button>
             <button type="reset">Clear</button>

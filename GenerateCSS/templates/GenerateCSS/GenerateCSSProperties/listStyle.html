@@ -2,87 +2,89 @@
 {% load static %}
 
 {% block script_and_css %}
-  <link rel="stylesheet" href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\listStyle.css' %}" />
-  <script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\listStyle.js' %}"></script>
+<link href="{% static 'GenerateCSS\GenerateCSSProperties\StyleSheets\listStyle.css' %}" rel="stylesheet"/>
+<script src="{% static 'GenerateCSS\GenerateCSSProperties\Scripts\listStyle.js' %}"></script>
 {% endblock %}
 
 {% block title %}
-  List Style
+List Style
 {% endblock %}
 
 {% block property_name %}
-  List Style
+List Style
 {% endblock %}
 
 {% block property_css %}
-  <div id="properies_css_container_code_box">
+<div id="properies_css_container_code_box">
     <div>Container</div>
-  </div>
+</div>
 {% endblock %}
 
 {% block property_css_playground %}
-  <div id="property_css_playground">
+<div id="property_css_playground">
     <div>
-      <ol>
-        <li>first line<br>...... continue</li>
-        <li>Second line<br>...... continue</li>
-        <li>Third line<br>...... continue</li>
-      </ol>
+        <ol>
+            <li>first line<br>...... continue</li>
+            <li>Second line<br>...... continue</li>
+            <li>Third line<br>...... continue</li>
+        </ol>
     </div>
-  </div>
+</div>
 {% endblock %}
 
 {% block property_controles %}
-  <img src="{% static 'Images\AdditionalImages\img.png' %}" style="display: none;"/>
-  <div id="properties_body_controles_container">
-    <div id="properties_body_controles_child1" class="properties_body_controles_child">
-      <div id="css_properties_container">
-        <div class="css_property_subproperty_name">List Style Type</div>
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-          <label class="form-check-label" for="flexSwitchCheckChecked">Image</label>
+<img src="{% static 'Images\AdditionalImages\img.png' %}" style="display: none;"/>
+<div id="properties_body_controles_container">
+    <div class="properties_body_controles_child" id="properties_body_controles_child1">
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">List Style Type</div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" id="flexSwitchCheckChecked" role="switch" type="checkbox">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Image</label>
+            </div>
+            <div class="css_property_subproperty_value"></div>
+            <br/>
+            <select id="selected_unit">
+                <optgroup label="list-style-type">
+                    <option selected value="upper-roman">upper-roman</option>
+                    <option value="upper-latin">upper-latin</option>
+                    <option value="upper-greek">upper-greek</option>
+                    <option value="upper-alpha">upper-alpha</option>
+                    <option value="square">square</option>
+                    <option value="lower-roman">lower-roman</option>
+                    <option value="lower-latin">lower-latin</option>
+                    <option value="lower-greek">lower-greek</option>
+                    <option value="lower-alpha">lower-alpha</option>
+                    <option value="katakana-iroha">katakana-iroha</option>
+                    <option value="katakana">katakana</option>
+                    <option value="hiragana-iroha">hiragana-iroha</option>
+                    <option value="hiragana">hiragana</option>
+                    <option value="hebrew">hebrew</option>
+                    <option value="georgian">georgian</option>
+                    <option value="decimal-leading-zero">decimal-leading-zero</option>
+                    <option value="decimal">decimal</option>
+                    <option value="cjk-ideographic">cjk-ideographic</option>
+                    <option value="circle">circle</option>
+                    <option value="armenian">armenian</option>
+                    <option value="disc">disc</option>
+                    <option value="none">none</option>
+                </optgroup>
+            </select>
+            <br>
         </div>
-        <div class="css_property_subproperty_value"></div><br />
-        <select id="selected_unit">
-          <optgroup label="list-style-type">
-            <option value="upper-roman" selected>upper-roman</option>
-            <option value="upper-latin">upper-latin</option>
-            <option value="upper-greek">upper-greek</option>
-            <option value="upper-alpha">upper-alpha</option>
-            <option value="square">square</option>
-            <option value="lower-roman">lower-roman</option>
-            <option value="lower-latin">lower-latin</option>
-            <option value="lower-greek">lower-greek</option>
-            <option value="lower-alpha">lower-alpha</option>
-            <option value="katakana-iroha">katakana-iroha</option>
-            <option value="katakana">katakana</option>
-            <option value="hiragana-iroha">hiragana-iroha</option>
-            <option value="hiragana">hiragana</option>
-            <option value="hebrew">hebrew</option>
-            <option value="georgian">georgian</option>
-            <option value="decimal-leading-zero">decimal-leading-zero</option>
-            <option value="decimal">decimal</option>
-            <option value="cjk-ideographic">cjk-ideographic</option>
-            <option value="circle">circle</option>
-            <option value="armenian">armenian</option>
-            <option value="disc">disc</option>
-            <option value="none">none</option>
-          </optgroup>
-        </select>
-        <br>
-      </div>
-      <div id="css_properties_container">
-        <div class="css_property_subproperty_name">List Style Position</div>
-        <div class="css_property_subproperty_value">kdgruh</div><br />
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="list-style-position" id="Outside" checked />
-          <label class="form-check-label" for="Outside">Outside</label>
+        <div id="css_properties_container">
+            <div class="css_property_subproperty_name">List Style Position</div>
+            <div class="css_property_subproperty_value">kdgruh</div>
+            <br/>
+            <div class="form-check">
+                <input checked class="form-check-input" id="Outside" name="list-style-position" type="radio"/>
+                <label class="form-check-label" for="Outside">Outside</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" id="Inside" name="list-style-position" type="radio"/>
+                <label class="form-check-label" for="Inside">Inside</label>
+            </div>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="list-style-position" id="Inside" />
-          <label class="form-check-label" for="Inside">Inside</label>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 {% endblock %}

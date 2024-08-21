@@ -3,43 +3,45 @@
 {% load custum_tags %}
 
 {% block title %}
-  Codophile
+Codophile
 {% endblock %}
 
 {% block script_and_css %}
-  <link rel="stylesheet" href="{% static 'StyleSheets/homepage.css' %}" />
-  <script src="{% static 'Scripts\homepage.js' %}"></script>
+<link href="{% static 'StyleSheets/homepage.css' %}" rel="stylesheet"/>
+<script src="{% static 'Scripts\homepage.js' %}"></script>
 {% endblock %}
 
 {% block codophile_main_container %}
-  <div class="homepage_topelement">
+<div class="homepage_topelement">
     <div id="homepage_websitename">
-      Generate CSS codes <br />with Codophile
+        Generate CSS codes <br/>with Codophile
     </div>
     <div id="homepage_dynamic_container">
-      <div id="homepage_dynamic"></div>
-      <span>_</span>
+        <div id="homepage_dynamic"></div>
+        <span>_</span>
     </div>
-  </div>
-  {% for content in contents %}
-    <div class="homepage_courseelement">
-      <div style="background-color: {{ content.id|modulous:10 }}aa;">
+</div>
+{% for content in contents %}
+<div class="homepage_courseelement">
+    <div style="background-color: {{ content.id|modulous:10 }}aa;">
         <div>
-          <div id="page_title">{{content.title}}</div>
-          <div id="page_content">{{content.desc|safe}}</div>
-          <a id="page_button" href="{{content.url}}">visit now</a>
+            <div id="page_title">{{content.title}}</div>
+            <div id="page_content">{{content.desc|safe}}</div>
+            <a href="{{content.url}}" id="page_button">visit now</a>
         </div>
         <div>
-          <div style="background-color: red; width: 70%; border-radius: 5px; background-color: black; color: antiquewhite; overflow: hidden;">
-            <div style="display: flex; padding: 15px; background-color: rgb(44, 44, 44); gap: 10px;">
-              <div style="height: 10px; width: 10px; background-color: red; border-radius: 50%;"></div>
-              <div style="height: 10px; width: 10px; background-color: greenyellow; border-radius: 50%;"></div>
-              <div style="height: 10px; width: 10px; background-color: blue; border-radius: 50%;"></div>
+            <div style="background-color: red; width: 70%; border-radius: 5px; background-color: black; color: antiquewhite; overflow: hidden;">
+                <div style="display: flex; padding: 15px; background-color: rgb(44, 44, 44); gap: 10px;">
+                    <div style="height: 10px; width: 10px; background-color: red; border-radius: 50%;"></div>
+                    <div style="height: 10px; width: 10px; background-color: greenyellow; border-radius: 50%;"></div>
+                    <div style="height: 10px; width: 10px; background-color: blue; border-radius: 50%;"></div>
+                </div>
+                <div id="homepage_courseelement_code" style="height: 40vh; overflow: scroll; padding: 15px;">
+                    {{content.code|safe}}
+                </div>
             </div>
-            <div style="height: 40vh; overflow: scroll; padding: 15px;" id="homepage_courseelement_code">{{content.code|safe}}</div>
-          </div>
         </div>
-      </div>
     </div>
-  {% endfor %}
+</div>
+{% endfor %}
 {% endblock %}
