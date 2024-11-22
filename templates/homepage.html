@@ -8,7 +8,7 @@ Codophile
 
 {% block script_and_css %}
 <link href="{% static 'StyleSheets/homepage.css' %}" rel="stylesheet"/>
-<script src="{% static 'Scripts\homepage.js' %}"></script>
+<script src="{% static 'Scripts/homepage.js' %}"></script>
 {% endblock %}
 
 {% block codophile_main_container %}
@@ -21,6 +21,68 @@ Codophile
         <span>_</span>
     </div>
 </div>
+
+<!-- Pricing Section -->
+<div id="pricing_section">
+    <h2>Unlock Premium Features</h2>
+    <div id="pricing_cards_container">
+        <!-- Free Plan -->
+        <div class="pricing_card">
+            <div class="pricing_card_header">
+                <h3>Free</h3>
+            </div>
+            <div class="pricing_card_body">
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Limited selection of code</li>
+                    <li>No personal guidance</li>
+                </ul>
+                <p><strong>Price:</strong> Free</p>
+            </div>
+            <div class="pricing_card_footer">
+                <a href="/register" class="pricing_card_button">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing_card">
+            <div class="pricing_card_header">
+                <h3>Pro</h3>
+            </div>
+            <div class="pricing_card_body">
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Unlimited selection of code</li>
+                    <li>No personal guidance</li>
+                </ul>
+                <p><strong>Price:</strong> ₹200/month</p>
+            </div>
+            <div class="pricing_card_footer">
+                <a href="/register" class="pricing_card_button">Upgrade to Pro</a>
+            </div>
+        </div>
+
+        <!-- Legendary Plan -->
+        <div class="pricing_card">
+            <div class="pricing_card_header">
+                <h3>Legendary</h3>
+            </div>
+            <div class="pricing_card_body">
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Unlimited selection of code</li>
+                    <li>Personal guidance</li>
+                </ul>
+                <p><strong>Price:</strong> ₹500/month</p>
+            </div>
+            <div class="pricing_card_footer">
+                <a href="/register" class="pricing_card_button">Upgrade to Legendary</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content Section -->
 {% for content in contents %}
 <div class="homepage_courseelement">
     <div style="background-color: {{ content.id|modulous:10 }}aa;">

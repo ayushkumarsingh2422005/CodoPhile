@@ -1,0 +1,55 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}Codophile | Terms and Conditions{% endblock %}
+
+{% block script_and_css %}
+<link href="{% static 'StyleSheets/privacy.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block codophile_main_container %}
+<div id="privacy_policy_container">
+    <h1>Terms and Conditions</h1>
+    <div id="privacy_policy_content">
+        <p>Welcome to Codophile. These terms and conditions outline the rules and regulations for the use of our website and services. By accessing or using our services, you accept these terms and conditions in full. If you disagree with any part of these terms, please do not use our website or services.</p>
+        
+        <h2>1. Acceptance of Terms</h2>
+        <p>By creating an account or using our services, you agree to comply with and be bound by these terms and conditions. This agreement is a legally binding contract between you and Codophile.</p>
+        
+        <h2>2. Use of Services</h2>
+        <ul>
+            <li>You must provide accurate and complete information during the registration process.</li>
+            <li>Our services are intended to assist users by generating CSS code based on their inputs. The generated code and tools provided are for personal or professional use only.</li>
+            <li>Any misuse, reproduction, or redistribution of our services without permission is strictly prohibited.</li>
+        </ul>
+        
+        <h2>3. Payment Terms</h2>
+        <p>All payments for premium features are processed securely through Razorpay. By purchasing any paid features, you agree to pay the fees specified at the time of purchase. We do not store your payment information, as all transactions are encrypted and handled through third-party processors adhering to PCI-DSS standards.</p>
+        
+        <h2>4. User Responsibilities</h2>
+        <ul>
+            <li>Use our services responsibly and comply with all applicable laws and regulations.</li>
+            <li>Do not attempt to gain unauthorized access to our system or data.</li>
+            <li>Do not interfere with the performance or integrity of our platform.</li>
+        </ul>
+
+        <h2>5. Intellectual Property Rights</h2>
+        <p>All content, tools, and CSS code generated on this platform are the intellectual property of Codophile. You are granted a limited license to use the generated code for personal or professional purposes, but redistribution or commercial exploitation without explicit permission is prohibited.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>Codophile will not be held liable for any damages resulting from the use or inability to use our services, including but not limited to direct, indirect, incidental, or consequential damages.</p>
+
+        <h2>7. Disclaimer of Warranties</h2>
+        <p>Codophile provides its services on an 'as is' basis without warranties of any kind, express or implied. We do not guarantee uninterrupted access, error-free functionality, or fitness for a particular purpose.</p>
+
+        <h2>8. Termination</h2>
+        <p>We reserve the right to terminate or suspend your access to our services at any time for violations of these terms or at our discretion.</p>
+        
+        <h2>9. Governing Law</h2>
+        <p>These terms are governed by the laws of India, and any disputes will be resolved in the courts of India.</p>
+
+        <h2>10. Changes to Terms</h2>
+        <p>We reserve the right to update these Terms and Conditions at any time. Updates will be posted on this page, and continued use of the platform indicates your acceptance of the updated terms.</p>
+    </div>
+</div>
+{% endblock %}

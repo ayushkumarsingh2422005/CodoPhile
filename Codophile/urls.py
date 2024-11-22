@@ -19,6 +19,10 @@ urlpatterns = [
                   path('signup/', views.handle_signup),
                   path('login/', views.handle_signin),
                   path('logout/', views.handle_logout),
+                  path('privacy-policy/', views.privacy_policy),
+                  path('terms-and-conditions/', views.terms_and_conditions),
+                  path('cancellation-and-refund-policy/', views.cancellation_and_refund_policy),
+
                   path('reset_password/', auth_views.PasswordResetView.as_view(template_name="reset_password.html"),
                        name='reset_password'),
                   path('reset_password_sent/',

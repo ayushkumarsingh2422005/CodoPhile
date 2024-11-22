@@ -124,3 +124,12 @@ def random_gun(request):
     send_mail(subject, message, from_email, recipient_list)
 
     return redirect('/')
+
+def privacy_policy(request):
+    return render(request, 'privacypolicy.html')
+
+def terms_and_conditions(request):
+    return render(request, 'termsandconditions.html')
+
+def cancellation_and_refund_policy(request):
+    return render(request, 'cancellationandrefundpolicy.html')

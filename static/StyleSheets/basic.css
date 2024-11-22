@@ -15,7 +15,7 @@ body {
     width: 100vw;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: block;
     flex-direction: column;
 }
 #codophile_main_top{
@@ -205,7 +205,7 @@ body {
 
 #codophile_main_container {
     width: 100%;
-    height: calc(100vh - 65px - 30px - 3px - 20px);
+    /* height: calc(100vh - 65px - 30px - 3px - 20px); */
     overflow: scroll;
     background-color: white;
 }
@@ -227,5 +227,77 @@ body {
     }
     #codophile_top_icon_cover{
         display: none;
+    }
+}
+
+#codophile_footer {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+    margin-top: 20px; /* Adds space above the footer */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-section {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
     }
 }

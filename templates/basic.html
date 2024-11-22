@@ -38,6 +38,7 @@
             <a href="/">Home</a>
             <a href="/about">About Us</a>
             <a href="/contact">Contact Us</a>
+            <!-- <a href="/privacy-policy">Privacy Policy</a> -->
             <div>
                 {% if user.is_authenticated %}
                 <a href="/logout" id="login_button">signout</a>
@@ -58,6 +59,7 @@
         <a href="/">Home</a>
         <a href="/about">About Us</a>
         <a href="/contact">Contact Us</a>
+        <!-- <a href="/privacy-policy">Privacy Policy</a> -->
         <div>
             {% if user.is_authenticated %}
             <div>
@@ -95,6 +97,9 @@
 <div id="codophile_main_container">
     {% block codophile_main_container %}{% endblock %}
 </div>
+
+
+
 <!-- Loader Code -->
 <div id="loader_container">
     <div id="loader_container_c"></div>
@@ -103,6 +108,34 @@
     <div id="loader_container_o_2"></div>
     <div id="loader_container_text"></div>
 </div>
+
+<div id="codophile_footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Codophile</h3>
+            <p>Codophile is your go-to platform for creative CSS generation. Explore, interact, and enhance your coding experience.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/cancellation-and-refund-policy">Cancellation and Refund Policy</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:ayush2422005@gmail.com">ayush2422005@gmail.com</a></p>
+            <p>Phone: <a href="tel:+918299797516">+91 829 979 7516</a></p>
+            <p>Adress: NIT Campus, P.O .RIT Jamshedpur 831014, Jharkhand, India</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Codophile. All rights reserved.</p>
+    </div>
+</div>
+
 </body>
 
 </html>
